@@ -6,7 +6,10 @@
   <p>"I have no special talent. I am only passionately curious." -- Albert Einstein</p>
 </div>
 
-# Before starting this book
+<br>
+<br>
+
+<h1 align="center">Before Starting This Book</h1>
 
 You’ll need to know **basic algebra**. In particular, take this function: $$f(x) = x \times 2$$. What is $$f(5)$$? If you answered 10, you’re set.
 
