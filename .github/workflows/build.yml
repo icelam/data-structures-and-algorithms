@@ -37,3 +37,4 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
           FOLDER: _book
+          COMMIT_MESSAGE: Deploy to gh-pages from @${{ github.sha }}
