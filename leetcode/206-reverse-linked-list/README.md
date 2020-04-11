@@ -19,6 +19,3 @@ A linked list can be reversed either iteratively or recursively. Could you imple
 ## Solution
 * [Approach 1: Iterative](./Solution1.md)
 * [Approach 2: Recursive](./Solution2.md)
-
-
-
