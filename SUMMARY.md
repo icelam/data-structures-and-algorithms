@@ -13,8 +13,8 @@
     * [Approach 1: Iterative](leetcode/206-reverse-linked-list/Solution1.md)
     * [Approach 2: Recursive](leetcode/206-reverse-linked-list/Solution2.md)
   * [344. Reverse String](leetcode/344-reverse-string/README.md)
-    * [Approach 1: Recursion, In-Place, O(N) Space](leetcode/344-reverse-string/Solution1.md)
-    * [Approach 2: Two Pointers, Iteration, O(1) Space](leetcode/344-reverse-string/Solution2.md)
+    * [Approach 1: Recursion, In-Place](leetcode/344-reverse-string/Solution1.md)
+    * [Approach 2: Two Pointers, Iteration](leetcode/344-reverse-string/Solution2.md)
 
 ## References
   * [Supplementary Readings](references/Readings.md)

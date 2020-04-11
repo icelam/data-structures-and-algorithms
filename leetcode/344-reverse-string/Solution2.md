@@ -1,7 +1,7 @@
 # 344. Reverse String
 [&larr;&nbsp;Back to problem](./README.md)
 
-## Approach 2: Two Pointers, Iteration, $$\mathcal{O}(1)$$ Space
+## Approach 2: Two Pointers, Iteration, $${O}(1)$$ Space
 
 ### Two Pointers Approach
 
@@ -46,5 +46,5 @@ class Solution:
 
 ### Complexity Analysis
 
-* Time complexity : $$\mathcal{O}(N)$$ to swap $$N/2$$ element.
-* Space complexity : $$\mathcal{O}(1)$$, it's a constant space solution.
+* Time complexity : $${O}(n)$$ to swap $$n/2$$ element.
+* Space complexity : $${O}(1)$$, it's a constant space solution.

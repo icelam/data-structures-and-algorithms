@@ -1,7 +1,7 @@
 # 344. Reverse String 
 [&larr;&nbsp;Back to problem](./README.md)
 
-## Approach 1: Recursion, In-Place, $$\mathcal{O}(N)$$ Space
+## Approach 1: Recursion, In-Place, $${O}(n)$$ Space
 
 **Does *in-place* mean constant space complexity?**
 
@@ -57,6 +57,6 @@ class Solution:
 
 ### Complexity Analysis
 
-* Time complexity : $$\mathcal{O}(N)$$ to swap $$N/2$$ element.
-* Space complexity : $$\mathcal{O}(N)$$ to keep the recursion stack.
+* Time complexity : $${O}(n)$$ to swap $$n/2$$ element.
+* Space complexity : $${O}(n)$$ to keep the recursion stack.
 
