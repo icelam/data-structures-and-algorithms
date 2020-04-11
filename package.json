@@ -1,0 +1,20 @@
+{
+  "name": "data-structures-and-algorithms",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "gitbook install && gitbook serve",
+    "build": "gitbook install && gitbook build"
+  },
+  "dependencies": {
+    "gitbook-cli": "^2.3.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.4.3",
+    "node-sass": "^4.13.1",
+    "prettier": "^1.17.1"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "title": "Data Structures and Algorithms",
+  "author": "icelam",
+  "description": "",
+  "links": {
+    "sidebar": {
+      "View on Github": "https://github.com/icelam"
+    }
+  },
+  "plugins": [
+    "favicon",
+    "katex",
+    "expandable-chapters-small",
+    "-sharing"
+  ],
+  "styles": {
+    "website": "assets/css/website.css"
+  },
+  "pluginsConfig": {
+    "favicon": {
+      "shortcut": "favicon.ico",
+      "bookmark": "favicon.ico",
+      "appleTouch": "assets/images/touch-icons/apple-touch-icon-57x57.png",
+      "appleTouchMore": {
+        "180x180": "assets/images/touch-icons/apple-touch-icon-180x180.png",
+        "152x152": "assets/images/touch-icons/apple-touch-icon-152x152.png",
+        "144x144": "assets/images/touch-icons/apple-touch-icon-144x144.png",
+        "120x120": "assets/images/touch-icons/apple-touch-icon-120x120.png",
+        "114x114": "assets/images/touch-icons/apple-touch-icon-114x114.png",
+        "76x76": "assets/images/touch-icons/apple-touch-icon-76x76.png",
+        "72x72": "assets/images/touch-icons/apple-touch-icon-72x72.png",
+        "57x57": "assets/images/touch-icons/apple-touch-icon-57x57.png"
+      }
+    }
+  }
+}
