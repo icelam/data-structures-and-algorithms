@@ -1,0 +1,461 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Approach 1: Recursion · Data Structures and Algorithms</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="icelam">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../assets/css/website.css">
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Solution2.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    
+        <link rel="shortcut icon" href='../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../assets/images/touch-icons/apple-touch-icon-57x57.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/touch-icons/apple-touch-icon-180x180.png">
+        
+        <link rel="apple-touch-icon" sizes="152x152" href="../../assets/images/touch-icons/apple-touch-icon-152x152.png">
+        
+        <link rel="apple-touch-icon" sizes="144x144" href="../../assets/images/touch-icons/apple-touch-icon-144x144.png">
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../assets/images/touch-icons/apple-touch-icon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="114x114" href="../../assets/images/touch-icons/apple-touch-icon-114x114.png">
+        
+        <link rel="apple-touch-icon" sizes="76x76" href="../../assets/images/touch-icons/apple-touch-icon-76x76.png">
+        
+        <link rel="apple-touch-icon" sizes="72x72" href="../../assets/images/touch-icons/apple-touch-icon-72x72.png">
+        
+        <link rel="apple-touch-icon" sizes="57x57" href="../../assets/images/touch-icons/apple-touch-icon-57x57.png">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/icelam/data-structures-and-algorithms" target="_blank" class="custom-link">View on Github</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">Summary</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../SUMMARY.html">
+            
+                <a href="../../SUMMARY.html">
+            
+                    
+                    Table of contents
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">LeetCode</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    202. Happy Number
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.1.1" data-path="Solution1.html">
+            
+                <a href="Solution1.html">
+            
+                    
+                    Approach 1: Recursion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="Solution2.html">
+            
+                <a href="Solution2.html">
+            
+                    
+                    Approach 2: Dynamic Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../206-reverse-linked-list/">
+            
+                <a href="../206-reverse-linked-list/">
+            
+                    
+                    206. Reverse Linked List
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../206-reverse-linked-list/Solution1.html">
+            
+                <a href="../206-reverse-linked-list/Solution1.html">
+            
+                    
+                    Approach 1: Iterative
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../206-reverse-linked-list/Solution2.html">
+            
+                <a href="../206-reverse-linked-list/Solution2.html">
+            
+                    
+                    Approach 2: Recursive
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../344-reverse-string/">
+            
+                <a href="../344-reverse-string/">
+            
+                    
+                    344. Reverse String
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../344-reverse-string/Solution1.html">
+            
+                <a href="../344-reverse-string/Solution1.html">
+            
+                    
+                    Approach 1: Recursion, In-Place, O(N) Space
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../344-reverse-string/Solution2.html">
+            
+                <a href="../344-reverse-string/Solution2.html">
+            
+                    
+                    Approach 2: Two Pointers, Iteration, O(1) Space
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">References</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../references/Readings.html">
+            
+                <a href="../../references/Readings.html">
+            
+                    
+                    Supplementary Readings
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Approach 1: Recursion</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="202-happy-number">202. Happy Number</h1>
+<p><a href="./">&#x2190;&#xA0;Back to problem</a></p>
+<h2 id="approach-1-recursion">Approach 1: Recursion</h2>
+<h3 id="intuition">Intuition</h3>
+<p>If there were no Kleene stars (the <code>*</code> wildcard character for regular expressions), the problem would be easier - we simply check from left to right if each character of the text matches the pattern.</p>
+<p>When a star is present, we may need to check many different suffixes of the text and see if they match the rest of the pattern. A recursive solution is a straightforward way to represent this relationship.</p>
+<h3 id="algorithm">Algorithm</h3>
+<p>Without a Kleene star, our solution would look like this:</p>
+<p>If a star is present in the pattern, it will be in the second position <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext><mi mathvariant="normal">p</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">[</mi><mn>1</mn><mi mathvariant="normal">]</mi></mtext></mrow><annotation encoding="application/x-tex">\text{pattern[1]}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord text textstyle uncramped"><span class="mord mathrm">pattern[1]</span></span></span></span></span>.  Then, we may ignore this part of the pattern, or delete a matching character in the text.  If we have a match on the remaining strings after any of these operations, then the initial inputs matched.</p>
+<h3 id="complexity-analysis">Complexity Analysis</h3>
+<ul>
+<li><p>Time Complexity: Let <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi><mo separator="true">,</mo><mi>P</mi></mrow><annotation encoding="application/x-tex">T, P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.13889em;">P</span></span></span></span> be the lengths of the text and the pattern respectively.  In the worst case, a call to <code>match(text[i:], pattern[2j:])</code> will be made <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mo fence="true">(</mo><mfrac linethickness="0px"><mrow><mi>i</mi><mo>+</mo><mi>j</mi></mrow><mrow><mi>i</mi></mrow></mfrac><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">\binom{i+j}{i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9056639999999999em;"></span><span class="strut bottom" style="height:1.255674em;vertical-align:-0.35001em;"></span><span class="base textstyle uncramped"><span class="mord reset-textstyle textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size1">(</span></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span></span><span style="top:-0.44399999999999995em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">i</span><span class="mbin mtight">+</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size1">)</span></span></span></span></span></span> times, and strings of the order <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>T</mi><mo>&#x2212;</mo><mi>i</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(T - i)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mbin">&#x2212;</span><span class="mord mathit">i</span><span class="mclose">)</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>P</mi><mo>&#x2212;</mo><mn>2</mn><mo>&#x2217;</mo><mi>j</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(P - 2*j)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mbin">&#x2212;</span><span class="mord mathrm">2</span><span class="mbin">&#x2217;</span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mclose">)</span></span></span></span> will be made.  Thus, the complexity has the order <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>u</mi><msubsup><mi>m</mi><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>T</mi></msubsup><mi>s</mi><mi>u</mi><msubsup><mi>m</mi><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>P</mi><mi mathvariant="normal">/</mi><mn>2</mn></mrow></msubsup><mrow><mo fence="true">(</mo><mfrac linethickness="0px"><mrow><mi>i</mi><mo>+</mo><mi>j</mi></mrow><mrow><mi>i</mi></mrow></mfrac><mo fence="true">)</mo></mrow><mi>O</mi><mo>(</mo><mi>T</mi><mo>+</mo><mi>P</mi><mo>&#x2212;</mo><mi>i</mi><mo>&#x2212;</mo><mn>2</mn><mi>j</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">sum_{i = 0}^T sum_{j = 0}^{P/2} \binom{i+j}{i} O(T+P-i-2j)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.0448em;"></span><span class="strut bottom" style="height:1.4577719999999998em;vertical-align:-0.4129719999999999em;"></span><span class="base textstyle uncramped"><span class="mord mathit">s</span><span class="mord mathit">u</span><span class="mord"><span class="mord mathit">m</span><span class="msupsub"><span class="vlist"><span style="top:0.258664em;margin-left:0em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">0</span></span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit">s</span><span class="mord mathit">u</span><span class="mord"><span class="mord mathit">m</span><span class="msupsub"><span class="vlist"><span style="top:0.2768639999999999em;margin-left:0em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">0</span></span></span></span><span style="top:-0.5198em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">P</span><span class="mord mathrm mtight">/</span><span class="mord mathrm mtight">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size1">(</span></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span></span><span style="top:-0.44399999999999995em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">i</span><span class="mbin mtight">+</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size1">)</span></span></span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mbin">+</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mbin">&#x2212;</span><span class="mord mathit">i</span><span class="mbin">&#x2212;</span><span class="mord mathrm">2</span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mclose">)</span></span></span></span>. With some effort outside the scope of this article, we can show this is bounded by <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo fence="false">(</mo><mo>(</mo><mi>T</mi><mo>+</mo><mi>P</mi><mo>)</mo><msup><mn>2</mn><mrow><mi>T</mi><mo>+</mo><mfrac><mrow><mi>P</mi></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></msup><mo fence="false">)</mo></mrow><annotation encoding="application/x-tex">O\big((T+P)2^{T + \frac{P}{2}}\big)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.973465em;"></span><span class="strut bottom" style="height:1.323475em;vertical-align:-0.35001em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mord style-wrap reset-textstyle textstyle uncramped"><span class="delimsizing size1">(</span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mbin">+</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mclose">)</span><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span><span class="mbin mtight">+</span><span class="mord reset-scriptstyle scriptstyle uncramped mtight"><span class="mopen sizing reset-size5 size5 reset-scriptstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.344em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord scriptscriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span style="top:-0.22142857142857142em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle textstyle uncramped frac-line"></span></span><span style="top:-0.384em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle uncramped mtight"><span class="mord scriptscriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">P</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-scriptstyle textstyle uncramped nulldelimiter"></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord style-wrap reset-textstyle textstyle uncramped"><span class="delimsizing size1">)</span></span></span></span></span>.</p>
+</li>
+<li><p>Space Complexity:  For every call to <code>match</code>, we will create those strings as described above, possibly creating duplicates.  If memory is not freed, this will also take a total of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo fence="false">(</mo><mo>(</mo><mi>T</mi><mo>+</mo><mi>P</mi><mo>)</mo><msup><mn>2</mn><mrow><mi>T</mi><mo>+</mo><mfrac><mrow><mi>P</mi></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></msup><mo fence="false">)</mo></mrow><annotation encoding="application/x-tex">O\big((T+P)2^{T + \frac{P}{2}}\big)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.973465em;"></span><span class="strut bottom" style="height:1.323475em;vertical-align:-0.35001em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mord style-wrap reset-textstyle textstyle uncramped"><span class="delimsizing size1">(</span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mbin">+</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mclose">)</span><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span><span class="mbin mtight">+</span><span class="mord reset-scriptstyle scriptstyle uncramped mtight"><span class="mopen sizing reset-size5 size5 reset-scriptstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.344em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord scriptscriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span style="top:-0.22142857142857142em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle textstyle uncramped frac-line"></span></span><span style="top:-0.384em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle uncramped mtight"><span class="mord scriptscriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">P</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-scriptstyle textstyle uncramped nulldelimiter"></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord style-wrap reset-textstyle textstyle uncramped"><span class="delimsizing size1">)</span></span></span></span></span> space, even though there are only order <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>T</mi><mn>2</mn></msup><mo>+</mo><msup><mi>P</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(T^2 + P^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">+</span><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span></span> unique suffixes of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span></span></span></span> and  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">T</span></span></span></span> that are actually required.</p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 202. Happy Number">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Solution2.html" class="navigation navigation-next " aria-label="Next page: Approach 2: Dynamic Programming">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Approach 1: Recursion","level":"2.1.1","depth":2,"next":{"title":"Approach 2: Dynamic Programming","level":"2.1.2","depth":2,"path":"leetcode/202-happy-number/Solution2.md","ref":"leetcode/202-happy-number/Solution2.md","articles":[]},"previous":{"title":"202. Happy Number","level":"2.1","depth":1,"path":"leetcode/202-happy-number/README.md","ref":"leetcode/202-happy-number/README.md","articles":[{"title":"Approach 1: Recursion","level":"2.1.1","depth":2,"path":"leetcode/202-happy-number/Solution1.md","ref":"leetcode/202-happy-number/Solution1.md","articles":[]},{"title":"Approach 2: Dynamic Programming","level":"2.1.2","depth":2,"path":"leetcode/202-happy-number/Solution2.md","ref":"leetcode/202-happy-number/Solution2.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["favicon","katex","expandable-chapters-small","-sharing"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"assets/images/touch-icons/apple-touch-icon-57x57.png","appleTouchMore":{"180x180":"assets/images/touch-icons/apple-touch-icon-180x180.png","152x152":"assets/images/touch-icons/apple-touch-icon-152x152.png","144x144":"assets/images/touch-icons/apple-touch-icon-144x144.png","120x120":"assets/images/touch-icons/apple-touch-icon-120x120.png","114x114":"assets/images/touch-icons/apple-touch-icon-114x114.png","76x76":"assets/images/touch-icons/apple-touch-icon-76x76.png","72x72":"assets/images/touch-icons/apple-touch-icon-72x72.png","57x57":"assets/images/touch-icons/apple-touch-icon-57x57.png"}},"katex":{},"expandable-chapters-small":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"icelam","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Data Structures and Algorithms","links":{"sidebar":{"View on Github":"https://github.com/icelam/data-structures-and-algorithms"}},"gitbook":"*","description":""},"file":{"path":"leetcode/202-happy-number/Solution1.md","mtime":"2020-04-11T14:57:01.126Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-11T14:58:33.256Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

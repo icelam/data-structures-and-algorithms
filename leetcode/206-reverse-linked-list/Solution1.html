@@ -1,0 +1,468 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Approach 1: Iterative · Data Structures and Algorithms</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="icelam">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../assets/css/website.css">
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Solution2.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    
+        <link rel="shortcut icon" href='../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../assets/images/touch-icons/apple-touch-icon-57x57.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/touch-icons/apple-touch-icon-180x180.png">
+        
+        <link rel="apple-touch-icon" sizes="152x152" href="../../assets/images/touch-icons/apple-touch-icon-152x152.png">
+        
+        <link rel="apple-touch-icon" sizes="144x144" href="../../assets/images/touch-icons/apple-touch-icon-144x144.png">
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../assets/images/touch-icons/apple-touch-icon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="114x114" href="../../assets/images/touch-icons/apple-touch-icon-114x114.png">
+        
+        <link rel="apple-touch-icon" sizes="76x76" href="../../assets/images/touch-icons/apple-touch-icon-76x76.png">
+        
+        <link rel="apple-touch-icon" sizes="72x72" href="../../assets/images/touch-icons/apple-touch-icon-72x72.png">
+        
+        <link rel="apple-touch-icon" sizes="57x57" href="../../assets/images/touch-icons/apple-touch-icon-57x57.png">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/icelam/data-structures-and-algorithms" target="_blank" class="custom-link">View on Github</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">Summary</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../SUMMARY.html">
+            
+                <a href="../../SUMMARY.html">
+            
+                    
+                    Table of contents
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">LeetCode</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../202-happy-number/">
+            
+                <a href="../202-happy-number/">
+            
+                    
+                    202. Happy Number
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../202-happy-number/Solution1.html">
+            
+                <a href="../202-happy-number/Solution1.html">
+            
+                    
+                    Approach 1: Recursion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../202-happy-number/Solution2.html">
+            
+                <a href="../202-happy-number/Solution2.html">
+            
+                    
+                    Approach 2: Dynamic Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    206. Reverse Linked List
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.2.1" data-path="Solution1.html">
+            
+                <a href="Solution1.html">
+            
+                    
+                    Approach 1: Iterative
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="Solution2.html">
+            
+                <a href="Solution2.html">
+            
+                    
+                    Approach 2: Recursive
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../344-reverse-string/">
+            
+                <a href="../344-reverse-string/">
+            
+                    
+                    344. Reverse String
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../344-reverse-string/Solution1.html">
+            
+                <a href="../344-reverse-string/Solution1.html">
+            
+                    
+                    Approach 1: Recursion, In-Place, O(N) Space
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../344-reverse-string/Solution2.html">
+            
+                <a href="../344-reverse-string/Solution2.html">
+            
+                    
+                    Approach 2: Two Pointers, Iteration, O(1) Space
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">References</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../references/Readings.html">
+            
+                <a href="../../references/Readings.html">
+            
+                    
+                    Supplementary Readings
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Approach 1: Iterative</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="206-reverse-linked-list">206. Reverse Linked List</h1>
+<p><a href="./">&#x2190;&#xA0;Back to problem</a></p>
+<h2 id="approach-1-iterative">Approach 1: Iterative</h2>
+<p>Assume that we have linked list <code>1 &#x2192; 2 &#x2192; 3 &#x2192; &#xD8;</code>, we would like to change it to <code>&#xD8; &#x2190; 1 &#x2190; 2 &#x2190; 3</code>.</p>
+<p>While you are traversing the list, change the current node&apos;s next pointer to point to its previous element. Since a node does not have reference to its previous node, you must store its previous element beforehand. You also need another pointer to store the next node before changing the reference. Do not forget to return the new head reference at the end!</p>
+<h3 id="implementation">Implementation</h3>
+<pre><code class="lang-Java"><span class="hljs-function"><span class="hljs-keyword">public</span> ListNode <span class="hljs-title">reverseList</span><span class="hljs-params">(ListNode head)</span> </span>{
+    ListNode prev = <span class="hljs-keyword">null</span>;
+    ListNode curr = head;
+    <span class="hljs-keyword">while</span> (curr != <span class="hljs-keyword">null</span>) {
+        ListNode nextTemp = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = nextTemp;
+    }
+    <span class="hljs-keyword">return</span> prev;
+}
+</code></pre>
+<h3 id="complexity-analysis">Complexity Analysis</h3>
+<ul>
+<li>Time complexity : <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="script">O</mi></mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>. Assume that nn is the list&apos;s length, the time complexity is <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="script">O</mi></mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>.</li>
+<li>Space complexity : <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="script">O</mi></mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O}(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mclose">)</span></span></span></span>.</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 206. Reverse Linked List">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Solution2.html" class="navigation navigation-next " aria-label="Next page: Approach 2: Recursive">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Approach 1: Iterative","level":"2.2.1","depth":2,"next":{"title":"Approach 2: Recursive","level":"2.2.2","depth":2,"path":"leetcode/206-reverse-linked-list/Solution2.md","ref":"leetcode/206-reverse-linked-list/Solution2.md","articles":[]},"previous":{"title":"206. Reverse Linked List","level":"2.2","depth":1,"path":"leetcode/206-reverse-linked-list/README.md","ref":"leetcode/206-reverse-linked-list/README.md","articles":[{"title":"Approach 1: Iterative","level":"2.2.1","depth":2,"path":"leetcode/206-reverse-linked-list/Solution1.md","ref":"leetcode/206-reverse-linked-list/Solution1.md","articles":[]},{"title":"Approach 2: Recursive","level":"2.2.2","depth":2,"path":"leetcode/206-reverse-linked-list/Solution2.md","ref":"leetcode/206-reverse-linked-list/Solution2.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["favicon","katex","expandable-chapters-small","-sharing"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"assets/images/touch-icons/apple-touch-icon-57x57.png","appleTouchMore":{"180x180":"assets/images/touch-icons/apple-touch-icon-180x180.png","152x152":"assets/images/touch-icons/apple-touch-icon-152x152.png","144x144":"assets/images/touch-icons/apple-touch-icon-144x144.png","120x120":"assets/images/touch-icons/apple-touch-icon-120x120.png","114x114":"assets/images/touch-icons/apple-touch-icon-114x114.png","76x76":"assets/images/touch-icons/apple-touch-icon-76x76.png","72x72":"assets/images/touch-icons/apple-touch-icon-72x72.png","57x57":"assets/images/touch-icons/apple-touch-icon-57x57.png"}},"katex":{},"expandable-chapters-small":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"icelam","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Data Structures and Algorithms","links":{"sidebar":{"View on Github":"https://github.com/icelam/data-structures-and-algorithms"}},"gitbook":"*","description":""},"file":{"path":"leetcode/206-reverse-linked-list/Solution1.md","mtime":"2020-04-11T14:57:01.126Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-11T14:58:33.256Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
