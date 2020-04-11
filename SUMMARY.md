@@ -3,6 +3,9 @@
 * [Table of contents](./SUMMARY.md)
 
 ## LeetCode
+  * [202. Happy Number](leetcode/202-happy-number/README.md)
+    * [Approach 1: Recursion](leetcode/202-happy-number/Solution1.md)
+    * [Approach 2: Dynamic Programming](leetcode/202-happy-number/Solution2.md)
   * [206. Reverse Linked List](leetcode/206-reverse-linked-list/README.md)
     * [Approach 1: Iterative](leetcode/206-reverse-linked-list/Solution1.md)
     * [Approach 2: Recursive](leetcode/206-reverse-linked-list/Solution2.md)
