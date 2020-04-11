@@ -3,6 +3,11 @@
 * [Table of contents](./SUMMARY.md)
 
 ## LeetCode
+  * [136. Single Number](leetcode/136-single-number/README.md)
+    * [Approach 1: List operation](leetcode/136-single-number/Solution1.md)
+    * [Approach 2: Hash Table](leetcode/136-single-number/Solution2.md)
+    * [Approach 3: Math](leetcode/136-single-number/Solution3.md)
+    * [Approach 4: Bit Manipulation](leetcode/136-single-number/Solution4.md)
   * [202. Happy Number](leetcode/202-happy-number/README.md)
     * [Approach 1: Recursion](leetcode/202-happy-number/Solution1.md)
     * [Approach 2: Dynamic Programming](leetcode/202-happy-number/Solution2.md)
