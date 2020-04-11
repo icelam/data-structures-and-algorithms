@@ -1,6 +1,5 @@
 # 202. Happy Number
 > Level: Easy  
-> Related topics: Recursion  
 > Link: [https://leetcode.com/problems/happy-number/](https://leetcode.com/problems/happy-number/)
 
 ## Problem
@@ -21,7 +20,3 @@ Explanation:
 62 + 82 = 100
 12 + 02 + 02 = 1
 ```
-
-## Solution
-* [Approach 1: Recursion](./Solution1.md)
-* [Approach 2: Dynamic Programming](./Solution2.md)

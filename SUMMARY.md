@@ -9,8 +9,6 @@
     * [Approach 3: Math](leetcode/136-single-number/Solution3.md)
     * [Approach 4: Bit Manipulation](leetcode/136-single-number/Solution4.md)
   * [202. Happy Number](leetcode/202-happy-number/README.md)
-    * [Approach 1: Recursion](leetcode/202-happy-number/Solution1.md)
-    * [Approach 2: Dynamic Programming](leetcode/202-happy-number/Solution2.md)
   * [206. Reverse Linked List](leetcode/206-reverse-linked-list/README.md)
     * [Approach 1: Iterative](leetcode/206-reverse-linked-list/Solution1.md)
     * [Approach 2: Recursive](leetcode/206-reverse-linked-list/Solution2.md)
