@@ -1,7 +1,7 @@
 # 136. Single Number
 [&larr;&nbsp;Back to problem](./README.md)
 
-##Approach 1: List operation
+## Approach 1: List operation
 
 ### Algorithm
 
@@ -49,4 +49,4 @@ class Solution(object):
 ## Complexity Analysis
 
 * Time complexity : $$O(n^2)$$. We iterate through `nums`, taking $$O(n)$$ time. We search the whole list to find whether there is duplicate number, taking $$O(n)$$ time. Because search is in the `for` loop, so we have to multiply both time complexities which is $$O(n^2)$$.
-* Space complexity : $$O(n)$$. We need a list of size nn to contain elements in `nums`.
+* Space complexity : $$O(n)$$. We need a list of size $$n$$ to contain elements in `nums`.
