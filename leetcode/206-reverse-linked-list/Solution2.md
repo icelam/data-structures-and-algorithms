@@ -1,7 +1,7 @@
 # 206. Reverse Linked List 
 [&larr;&nbsp;Back to problem](./README.md)
 
-## Approach 1: Iterative
+## Approach 2: Recursive
 
 The recursive version is slightly trickier and the key is to work backwards. Assume that the rest of the list had already been reversed, now how do I reverse the front part? Let's assume the list is: n<sub>1</sub> → … → n<sub>k-1</sub> → n<sub>k</sub> → n<sub>k+1</sub> → … → n<sub>m</sub> → Ø
 
