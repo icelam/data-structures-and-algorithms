@@ -38,3 +38,5 @@ jobs:
           BRANCH: gh-pages
           FOLDER: _book
           COMMIT_MESSAGE: Deploy to gh-pages from @${{ github.sha }}
+          GIT_CONFIG_NAME: github-actions
+          GIT_CONFIG_EMAIL: actions@github.com
