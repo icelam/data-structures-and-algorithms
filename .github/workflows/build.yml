@@ -31,12 +31,16 @@ jobs:
       - name: Build Gitbook
         run: |
           yarn build
+      - name: Get short Github SHA
+        id: vars
+        run: |
+          echo ::set-output name=sha_short::$(git rev-parse --short ${{ github.sha }})
       - name: Deploy to Github pages
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
           FOLDER: _book
-          COMMIT_MESSAGE: Deploy to gh-pages from @${{ github.sha }}
+          COMMIT_MESSAGE: Deploy to gh-pages from @ ${{ steps.vars.outputs.sha_short }}
           GIT_CONFIG_NAME: github-actions
           GIT_CONFIG_EMAIL: actions@github.com
