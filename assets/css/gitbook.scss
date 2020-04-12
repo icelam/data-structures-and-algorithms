@@ -1,0 +1,30 @@
+/* --- Gitbook reset --- */
+.gitbook-link {
+  display: none;
+}
+
+.page-inner {
+  padding: 23px;
+}
+
+.book-header h1 {
+  display: none;
+}
+
+.page-inner {
+  code, pre {
+    border-radius: 0.3125em;
+  }
+}
+
+.color-theme-1,
+.color-theme-2 {
+  #book-search-input {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.markdown-section sup,
+.markdown-section sub {
+  font-size: 0.75em;
+}

@@ -25,6 +25,10 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codegroup/code.group.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -42,7 +46,7 @@
 
     
         
-        <link rel="stylesheet" href="../../assets/css/website.css">
+        <link rel="stylesheet" href="../../website-1586705893855.css">
         
     
 
@@ -503,8 +507,15 @@
 <p>If you do this, you&apos;ll find there&apos;s only one cycle: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>4</mn><mo>&#x2192;</mo><mn>1</mn><mn>6</mn><mo>&#x2192;</mo><mn>3</mn><mn>7</mn><mo>&#x2192;</mo><mn>5</mn><mn>8</mn><mo>&#x2192;</mo><mn>8</mn><mn>9</mn><mo>&#x2192;</mo><mn>1</mn><mn>4</mn><mn>5</mn><mo>&#x2192;</mo><mn>4</mn><mn>2</mn><mo>&#x2192;</mo><mn>2</mn><mn>0</mn><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">4 \rightarrow 16 \rightarrow 37 \rightarrow 58 \rightarrow 89 \rightarrow 145 \rightarrow 42 \rightarrow 20 \rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">4</span><span class="mrel">&#x2192;</span><span class="mord mathrm">1</span><span class="mord mathrm">6</span><span class="mrel">&#x2192;</span><span class="mord mathrm">3</span><span class="mord mathrm">7</span><span class="mrel">&#x2192;</span><span class="mord mathrm">5</span><span class="mord mathrm">8</span><span class="mrel">&#x2192;</span><span class="mord mathrm">8</span><span class="mord mathrm">9</span><span class="mrel">&#x2192;</span><span class="mord mathrm">1</span><span class="mord mathrm">4</span><span class="mord mathrm">5</span><span class="mrel">&#x2192;</span><span class="mord mathrm">4</span><span class="mord mathrm">2</span><span class="mrel">&#x2192;</span><span class="mord mathrm">2</span><span class="mord mathrm">0</span><span class="mrel">&#x2192;</span></span></span></span>. All other numbers are on chains that lead into this cycle, or on chains that lead into <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mn>1</mn></mrow><annotation encoding="application/x-tex">11</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mord mathrm">1</span></span></span></span>.</p>
 <p>Therefore, we can just hardcode a <strong>HashSet</strong> containing these numbers, and if we ever reach one of them, then we know we&apos;re in the cycle. There&apos;s no need to keep track of where we&apos;ve been previously.</p>
 <h3 id="implementation">Implementation</h3>
-<p>Java: </p>
-<pre><code class="lang-Java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+<p><div id="847d9b448977618c38f6129a13fe911b" class="gbcg gbcg-codegroup" data-remember-tabs="false">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-636bdf9d0fbe4d77e327b0b56c5e870d" class="gbcg-selector gbcg-active" data-tab="Java-0-636bdf9d0fbe4d77e327b0b56c5e870d">Java</a>
+    <a id="select-Python-1-39f21b5499bfe617247a67ceb3d3afc4" class="gbcg-selector" data-tab="Python-1-39f21b5499bfe617247a67ceb3d3afc4">Python</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-636bdf9d0fbe4d77e327b0b56c5e870d" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Set&lt;Integer&gt; cycleMembers =
         <span class="hljs-keyword">new</span> HashSet&lt;&gt;(Arrays.asList(<span class="hljs-number">4</span>, <span class="hljs-number">16</span>, <span class="hljs-number">37</span>, <span class="hljs-number">58</span>, <span class="hljs-number">89</span>, <span class="hljs-number">145</span>, <span class="hljs-number">42</span>, <span class="hljs-number">20</span>));
 
@@ -527,8 +538,41 @@
     }
 }
 </code></pre>
-<p>Python:</p>
-<pre><code class="lang-Python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">isHappy</span><span class="hljs-params">(self, n: int)</span> -&gt; bool:</span>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-636bdf9d0fbe4d77e327b0b56c5e870d" id="java">Java</h3>
+        <div id="Java-0-636bdf9d0fbe4d77e327b0b56c5e870d" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Set&lt;Integer&gt; cycleMembers =
+        <span class="hljs-keyword">new</span> HashSet&lt;&gt;(Arrays.asList(<span class="hljs-number">4</span>, <span class="hljs-number">16</span>, <span class="hljs-number">37</span>, <span class="hljs-number">58</span>, <span class="hljs-number">89</span>, <span class="hljs-number">145</span>, <span class="hljs-number">42</span>, <span class="hljs-number">20</span>));
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getNext</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+        <span class="hljs-keyword">int</span> totalSum = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">while</span> (n &gt; <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">int</span> d = n % <span class="hljs-number">10</span>;
+            n = n / <span class="hljs-number">10</span>;
+            totalSum += d * d;
+        }
+        <span class="hljs-keyword">return</span> totalSum;
+    }
+
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isHappy</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+        <span class="hljs-keyword">while</span> (n != <span class="hljs-number">1</span> &amp;&amp; !cycleMembers.contains(n)) {
+            n = getNext(n);
+        }
+        <span class="hljs-keyword">return</span> n == <span class="hljs-number">1</span>;
+    }
+}
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Python-1-39f21b5499bfe617247a67ceb3d3afc4" id="python">Python</h3>
+        <div id="Python-1-39f21b5499bfe617247a67ceb3d3afc4" class="gbcg-tab-item gbcb-Python">
+          <pre><code class="lang-Python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">isHappy</span><span class="hljs-params">(self, n: int)</span> -&gt; bool:</span>
     cycle_members = {<span class="hljs-number">4</span>, <span class="hljs-number">16</span>, <span class="hljs-number">37</span>, <span class="hljs-number">58</span>, <span class="hljs-number">89</span>, <span class="hljs-number">145</span>, <span class="hljs-number">42</span>, <span class="hljs-number">20</span>}
 
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_next</span><span class="hljs-params">(number)</span>:</span>
@@ -543,6 +587,11 @@
 
     <span class="hljs-keyword">return</span> n == <span class="hljs-number">1</span>
 </code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h3 id="complexity-analysis">Complexity Analysis</h3>
 <ul>
 <li>Time complexity : <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>log</mi><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>. Same as <a href="Solution1.html">Solution 1</a> and <a href="Solution2.html">Solution 2</a>.</li>
@@ -591,7 +640,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Approach 3: Hardcoding the Only Cycle","level":"2.3.3","depth":2,"next":{"title":"206. Reverse Linked List","level":"2.4","depth":1,"path":"leetcode/206-reverse-linked-list/README.md","ref":"leetcode/206-reverse-linked-list/README.md","articles":[{"title":"Approach 1: Iterative","level":"2.4.1","depth":2,"path":"leetcode/206-reverse-linked-list/Solution1.md","ref":"leetcode/206-reverse-linked-list/Solution1.md","articles":[]},{"title":"Approach 2: Recursive","level":"2.4.2","depth":2,"path":"leetcode/206-reverse-linked-list/Solution2.md","ref":"leetcode/206-reverse-linked-list/Solution2.md","articles":[]}]},"previous":{"title":"Approach 2: Floyd's Cycle-Finding Algorithm","level":"2.3.2","depth":2,"path":"leetcode/202-happy-number/Solution2.md","ref":"leetcode/202-happy-number/Solution2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","katex","expandable-chapters-small","-sharing"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"assets/images/touch-icons/apple-touch-icon-57x57.png","appleTouchMore":{"180x180":"assets/images/touch-icons/apple-touch-icon-180x180.png","152x152":"assets/images/touch-icons/apple-touch-icon-152x152.png","144x144":"assets/images/touch-icons/apple-touch-icon-144x144.png","120x120":"assets/images/touch-icons/apple-touch-icon-120x120.png","114x114":"assets/images/touch-icons/apple-touch-icon-114x114.png","76x76":"assets/images/touch-icons/apple-touch-icon-76x76.png","72x72":"assets/images/touch-icons/apple-touch-icon-72x72.png","57x57":"assets/images/touch-icons/apple-touch-icon-57x57.png"}},"katex":{},"expandable-chapters-small":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"icelam","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Data Structures and Algorithms","links":{"sidebar":{"View on Github":"https://github.com/icelam/data-structures-and-algorithms"}},"gitbook":"*","description":""},"file":{"path":"leetcode/202-happy-number/Solution3.md","mtime":"2020-04-12T12:26:12.239Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-12T12:27:26.287Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Approach 3: Hardcoding the Only Cycle","level":"2.3.3","depth":2,"next":{"title":"206. Reverse Linked List","level":"2.4","depth":1,"path":"leetcode/206-reverse-linked-list/README.md","ref":"leetcode/206-reverse-linked-list/README.md","articles":[{"title":"Approach 1: Iterative","level":"2.4.1","depth":2,"path":"leetcode/206-reverse-linked-list/Solution1.md","ref":"leetcode/206-reverse-linked-list/Solution1.md","articles":[]},{"title":"Approach 2: Recursive","level":"2.4.2","depth":2,"path":"leetcode/206-reverse-linked-list/Solution2.md","ref":"leetcode/206-reverse-linked-list/Solution2.md","articles":[]}]},"previous":{"title":"Approach 2: Floyd's Cycle-Finding Algorithm","level":"2.3.2","depth":2,"path":"leetcode/202-happy-number/Solution2.md","ref":"leetcode/202-happy-number/Solution2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","katex","expandable-chapters-small","codegroup","styles-sass-fix","-sharing"],"styles":{"website":"website-1586705893855.css"},"pluginsConfig":{"styles-sass-fix":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"fontsettings":{"theme":"night","family":"sans","size":1},"highlight":{},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"assets/images/touch-icons/apple-touch-icon-57x57.png","appleTouchMore":{"180x180":"assets/images/touch-icons/apple-touch-icon-180x180.png","152x152":"assets/images/touch-icons/apple-touch-icon-152x152.png","144x144":"assets/images/touch-icons/apple-touch-icon-144x144.png","120x120":"assets/images/touch-icons/apple-touch-icon-120x120.png","114x114":"assets/images/touch-icons/apple-touch-icon-114x114.png","76x76":"assets/images/touch-icons/apple-touch-icon-76x76.png","72x72":"assets/images/touch-icons/apple-touch-icon-72x72.png","57x57":"assets/images/touch-icons/apple-touch-icon-57x57.png"}},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"icelam","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Data Structures and Algorithms","links":{"sidebar":{"View on Github":"https://github.com/icelam/data-structures-and-algorithms"}},"gitbook":"*","description":""},"file":{"path":"leetcode/202-happy-number/Solution3.md","mtime":"2020-04-12T15:36:37.566Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-12T15:38:12.628Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -602,6 +651,10 @@
     
         
         <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-codegroup/code.group.js"></script>
         
     
         

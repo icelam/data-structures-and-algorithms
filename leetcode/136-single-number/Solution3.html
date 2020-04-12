@@ -25,6 +25,10 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codegroup/code.group.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -42,7 +46,7 @@
 
     
         
-        <link rel="stylesheet" href="../../assets/css/website.css">
+        <link rel="stylesheet" href="../../website-1586705893855.css">
         
     
 
@@ -498,8 +502,15 @@
 <h3 id="concept">Concept</h3>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mo>&#x2217;</mo><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>c</mi><mo>)</mo><mo>&#x2212;</mo><mo>(</mo><mi>a</mi><mo>+</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>c</mi><mo>)</mo><mo>=</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">2 * (a + b + c) - (a + a + b + b + c) = c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">2</span><span class="mbin">&#x2217;</span><span class="mopen">(</span><span class="mord mathit">a</span><span class="mbin">+</span><span class="mord mathit">b</span><span class="mbin">+</span><span class="mord mathit">c</span><span class="mclose">)</span><span class="mbin">&#x2212;</span><span class="mopen">(</span><span class="mord mathit">a</span><span class="mbin">+</span><span class="mord mathit">a</span><span class="mbin">+</span><span class="mord mathit">b</span><span class="mbin">+</span><span class="mord mathit">b</span><span class="mbin">+</span><span class="mord mathit">c</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit">c</span></span></span></span></p>
 <h3 id="implementation">Implementation</h3>
-<p>Java:</p>
-<pre><code class="lang-Java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+<p><div id="6c470b86469b29ba228e577e4b18daf5" class="gbcg gbcg-codegroup" data-remember-tabs="false">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-f9d7781aabfed42a906dbb4081b2c2c4" class="gbcg-selector gbcg-active" data-tab="Java-0-f9d7781aabfed42a906dbb4081b2c2c4">Java</a>
+    <a id="select-Python-1-26ea4f890c8edaef95dee4b0b0055cb0" class="gbcg-selector" data-tab="Python-1-26ea4f890c8edaef95dee4b0b0055cb0">Python</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-f9d7781aabfed42a906dbb4081b2c2c4" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">singleNumber</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>{
     <span class="hljs-keyword">int</span> sumOfSet = <span class="hljs-number">0</span>, sumOfNums = <span class="hljs-number">0</span>;
     Set&lt;Integer&gt; set = <span class="hljs-keyword">new</span> HashSet();
@@ -515,8 +526,34 @@
   }
 }
 </code></pre>
-<p>Python:</p>
-<pre><code class="lang-Python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span><span class="hljs-params">(object)</span>:</span>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-f9d7781aabfed42a906dbb4081b2c2c4" id="java">Java</h3>
+        <div id="Java-0-f9d7781aabfed42a906dbb4081b2c2c4" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">singleNumber</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>{
+    <span class="hljs-keyword">int</span> sumOfSet = <span class="hljs-number">0</span>, sumOfNums = <span class="hljs-number">0</span>;
+    Set&lt;Integer&gt; set = <span class="hljs-keyword">new</span> HashSet();
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> num : nums) {
+      <span class="hljs-keyword">if</span> (!set.contains(num)) {
+        set.add(num);
+        sumOfSet += num;
+      }
+      sumOfNums += num;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">2</span> * sumOfSet - sumOfNums;
+  }
+}
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Python-1-26ea4f890c8edaef95dee4b0b0055cb0" id="python">Python</h3>
+        <div id="Python-1-26ea4f890c8edaef95dee4b0b0055cb0" class="gbcg-tab-item gbcb-Python">
+          <pre><code class="lang-Python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span><span class="hljs-params">(object)</span>:</span>
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">singleNumber</span><span class="hljs-params">(self, nums)</span>:</span>
         <span class="hljs-string">&quot;&quot;&quot;
         :type nums: List[int]
@@ -524,6 +561,11 @@
         &quot;&quot;&quot;</span>
         <span class="hljs-keyword">return</span> <span class="hljs-number">2</span> * sum(set(nums)) - sum(nums)
 </code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h2 id="complexity-analysis">Complexity Analysis</h2>
 <ul>
 <li>Time complexity : <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>+</mo><mi>n</mi><mo>)</mo><mo>=</mo><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n + n) = O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mbin">+</span><span class="mord mathit">n</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>. <code>sum</code> will call <code>next</code> to iterate through <code>nums</code>. We can see it as <code>sum(list(i, for i in nums))</code> which means the time complexity is <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span> because of the number of elements(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span>) in <code>nums</code>.</li>
@@ -572,7 +614,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Approach 3: Math","level":"2.2.3","depth":2,"next":{"title":"Approach 4: Bit Manipulation","level":"2.2.4","depth":2,"path":"leetcode/136-single-number/Solution4.md","ref":"leetcode/136-single-number/Solution4.md","articles":[]},"previous":{"title":"Approach 2: Hash Table","level":"2.2.2","depth":2,"path":"leetcode/136-single-number/Solution2.md","ref":"leetcode/136-single-number/Solution2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","katex","expandable-chapters-small","-sharing"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"assets/images/touch-icons/apple-touch-icon-57x57.png","appleTouchMore":{"180x180":"assets/images/touch-icons/apple-touch-icon-180x180.png","152x152":"assets/images/touch-icons/apple-touch-icon-152x152.png","144x144":"assets/images/touch-icons/apple-touch-icon-144x144.png","120x120":"assets/images/touch-icons/apple-touch-icon-120x120.png","114x114":"assets/images/touch-icons/apple-touch-icon-114x114.png","76x76":"assets/images/touch-icons/apple-touch-icon-76x76.png","72x72":"assets/images/touch-icons/apple-touch-icon-72x72.png","57x57":"assets/images/touch-icons/apple-touch-icon-57x57.png"}},"katex":{},"expandable-chapters-small":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"icelam","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Data Structures and Algorithms","links":{"sidebar":{"View on Github":"https://github.com/icelam/data-structures-and-algorithms"}},"gitbook":"*","description":""},"file":{"path":"leetcode/136-single-number/Solution3.md","mtime":"2020-04-12T12:26:12.239Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-12T12:27:26.287Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Approach 3: Math","level":"2.2.3","depth":2,"next":{"title":"Approach 4: Bit Manipulation","level":"2.2.4","depth":2,"path":"leetcode/136-single-number/Solution4.md","ref":"leetcode/136-single-number/Solution4.md","articles":[]},"previous":{"title":"Approach 2: Hash Table","level":"2.2.2","depth":2,"path":"leetcode/136-single-number/Solution2.md","ref":"leetcode/136-single-number/Solution2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","katex","expandable-chapters-small","codegroup","styles-sass-fix","-sharing"],"styles":{"website":"website-1586705893855.css"},"pluginsConfig":{"styles-sass-fix":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"fontsettings":{"theme":"night","family":"sans","size":1},"highlight":{},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"assets/images/touch-icons/apple-touch-icon-57x57.png","appleTouchMore":{"180x180":"assets/images/touch-icons/apple-touch-icon-180x180.png","152x152":"assets/images/touch-icons/apple-touch-icon-152x152.png","144x144":"assets/images/touch-icons/apple-touch-icon-144x144.png","120x120":"assets/images/touch-icons/apple-touch-icon-120x120.png","114x114":"assets/images/touch-icons/apple-touch-icon-114x114.png","76x76":"assets/images/touch-icons/apple-touch-icon-76x76.png","72x72":"assets/images/touch-icons/apple-touch-icon-72x72.png","57x57":"assets/images/touch-icons/apple-touch-icon-57x57.png"}},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"icelam","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Data Structures and Algorithms","links":{"sidebar":{"View on Github":"https://github.com/icelam/data-structures-and-algorithms"}},"gitbook":"*","description":""},"file":{"path":"leetcode/136-single-number/Solution3.md","mtime":"2020-04-12T15:36:37.566Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-12T15:38:12.628Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -583,6 +625,10 @@
     
         
         <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-codegroup/code.group.js"></script>
         
     
         
