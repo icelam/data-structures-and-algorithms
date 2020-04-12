@@ -20,3 +20,8 @@ Explanation:
 62 + 82 = 100
 12 + 02 + 02 = 1
 ```
+
+## Solution
+* [Approach 1: Detect Cycles with a HashSet](./Solution1.md)
+* [Approach 2: Floyd's Cycle-Finding Algorithm](./Solution2.md)
+* [Approach 3: Hardcoding the Only Cycle](./Solution3.md)
