@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Approach 4: Bit Manipulation · Data Structures and Algorithms</title>
+        <title>24. Swap Nodes in Pairs · Data Structures and Algorithms</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -58,10 +58,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../202-happy-number/" />
+    <link rel="next" href="Solution1.html" />
     
     
-    <link rel="prev" href="Solution3.html" />
+    <link rel="prev" href="../../SUMMARY.html" />
     
 
     
@@ -163,9 +163,9 @@
         
         
     
-        <li class="chapter " data-level="2.1" data-path="../24-swap-nodes-in-pairs/">
+        <li class="chapter active" data-level="2.1" data-path="./">
             
-                <a href="../24-swap-nodes-in-pairs/">
+                <a href="./">
             
                     
                     24. Swap Nodes in Pairs
@@ -177,9 +177,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.1.1" data-path="../24-swap-nodes-in-pairs/Solution1.html">
+        <li class="chapter " data-level="2.1.1" data-path="Solution1.html">
             
-                <a href="../24-swap-nodes-in-pairs/Solution1.html">
+                <a href="Solution1.html">
             
                     
                     Approach 1: Recursive Approach
@@ -190,9 +190,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.2" data-path="../24-swap-nodes-in-pairs/Solution2.html">
+        <li class="chapter " data-level="2.1.2" data-path="Solution2.html">
             
-                <a href="../24-swap-nodes-in-pairs/Solution2.html">
+                <a href="Solution2.html">
             
                     
                     Approach 2: Iterative Approach
@@ -208,9 +208,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="./">
+        <li class="chapter " data-level="2.2" data-path="../136-single-number/">
             
-                <a href="./">
+                <a href="../136-single-number/">
             
                     
                     136. Single Number
@@ -222,9 +222,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.2.1" data-path="Solution1.html">
+        <li class="chapter " data-level="2.2.1" data-path="../136-single-number/Solution1.html">
             
-                <a href="Solution1.html">
+                <a href="../136-single-number/Solution1.html">
             
                     
                     Approach 1: List operation
@@ -235,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.2" data-path="Solution2.html">
+        <li class="chapter " data-level="2.2.2" data-path="../136-single-number/Solution2.html">
             
-                <a href="Solution2.html">
+                <a href="../136-single-number/Solution2.html">
             
                     
                     Approach 2: Hash Table
@@ -248,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.3" data-path="Solution3.html">
+        <li class="chapter " data-level="2.2.3" data-path="../136-single-number/Solution3.html">
             
-                <a href="Solution3.html">
+                <a href="../136-single-number/Solution3.html">
             
                     
                     Approach 3: Math
@@ -261,9 +261,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2.4" data-path="Solution4.html">
+        <li class="chapter " data-level="2.2.4" data-path="../136-single-number/Solution4.html">
             
-                <a href="Solution4.html">
+                <a href="../136-single-number/Solution4.html">
             
                     
                     Approach 4: Bit Manipulation
@@ -477,7 +477,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Approach 4: Bit Manipulation</a>
+        <a href="../.." >24. Swap Nodes in Pairs</a>
     </h1>
 </div>
 
@@ -492,50 +492,19 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="136-single-number">136. Single Number</h1>
-<p><a href="./">&#x2190;&#xA0;Back to problem</a></p>
-<h2 id="approach-4-bit-manipulation">Approach 4: Bit Manipulation</h2>
-<h3 id="concept">Concept</h3>
+                                <h1 id="24-swap-nodes-in-pairs">24. Swap Nodes in Pairs</h1>
+<blockquote>
+<p>Level: Meduim<br>Link: <a href="https://leetcode.com/problems/swap-nodes-in-pairs/" target="_blank">https://leetcode.com/problems/swap-nodes-in-pairs/</a></p>
+</blockquote>
+<h2 id="problem">Problem</h2>
+<p>Given a linked list, swap every two adjacent nodes and return its head.</p>
+<p>You may <strong>not</strong> modify the values in the list&apos;s nodes, only nodes itself may be changed.</p>
+<h4 id="example">Example:</h4>
+<pre><code>Given 1-&gt;2-&gt;3-&gt;4, you should return the list as 2-&gt;1-&gt;4-&gt;3.
+</code></pre><h2 id="solution">Solution</h2>
 <ul>
-<li>If we take XOR of zero and some bit, it will return that bit<ul>
-<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo>&#x2295;</mo><mn>0</mn><mo>=</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">a \oplus 0 = a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mbin">&#x2295;</span><span class="mord mathrm">0</span><span class="mrel">=</span><span class="mord mathit">a</span></span></span></span></li>
-</ul>
-</li>
-<li>If we take XOR of two same bits, it will return 0<ul>
-<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo>&#x2295;</mo><mi>a</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a \oplus a = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mbin">&#x2295;</span><span class="mord mathit">a</span><span class="mrel">=</span><span class="mord mathrm">0</span></span></span></span></li>
-</ul>
-</li>
-<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo>&#x2295;</mo><mi>b</mi><mo>&#x2295;</mo><mi>a</mi><mo>=</mo><mo>(</mo><mi>a</mi><mo>&#x2295;</mo><mi>a</mi><mo>)</mo><mo>&#x2295;</mo><mi>b</mi><mo>=</mo><mn>0</mn><mo>&#x2295;</mo><mi>b</mi><mo>=</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a \oplus b \oplus a = (a \oplus a) \oplus b = 0 \oplus b = b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mbin">&#x2295;</span><span class="mord mathit">b</span><span class="mbin">&#x2295;</span><span class="mord mathit">a</span><span class="mrel">=</span><span class="mopen">(</span><span class="mord mathit">a</span><span class="mbin">&#x2295;</span><span class="mord mathit">a</span><span class="mclose">)</span><span class="mbin">&#x2295;</span><span class="mord mathit">b</span><span class="mrel">=</span><span class="mord mathrm">0</span><span class="mbin">&#x2295;</span><span class="mord mathit">b</span><span class="mrel">=</span><span class="mord mathit">b</span></span></span></span></li>
-</ul>
-<p>So we can XOR all bits together to find the unique number.</p>
-<h3 id="implementation">Implementation</h3>
-<p>Java:</p>
-<pre><code class="lang-Java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
-  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">singleNumber</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>{
-    <span class="hljs-keyword">int</span> a = <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i : nums) {
-      a ^= i;
-    }
-    <span class="hljs-keyword">return</span> a;
-  }
-}
-</code></pre>
-<p>Python:</p>
-<pre><code class="lang-Python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span><span class="hljs-params">(object)</span>:</span>
-    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">singleNumber</span><span class="hljs-params">(self, nums)</span>:</span>
-        <span class="hljs-string">&quot;&quot;&quot;
-        :type nums: List[int]
-        :rtype: int
-        &quot;&quot;&quot;</span>
-        a = <span class="hljs-number">0</span>
-        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> nums:
-            a ^= i
-        <span class="hljs-keyword">return</span> a
-</code></pre>
-<h2 id="complexity-analysis">Complexity Analysis</h2>
-<ul>
-<li>Time complexity : <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>. We only iterate through <code>nums</code>, so the time complexity is the number of elements in <code>nums</code>.</li>
-<li>Space complexity : <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mclose">)</span></span></span></span>.</li>
+<li><a href="Solution1.html">Approach 1: Recursive Approach</a></li>
+<li><a href="Solution2.html">Approach 2: Iterative Approach</a></li>
 </ul>
 
                                 
@@ -564,12 +533,12 @@
 
             
                 
-                <a href="Solution3.html" class="navigation navigation-prev " aria-label="Previous page: Approach 3: Math">
+                <a href="../../SUMMARY.html" class="navigation navigation-prev " aria-label="Previous page: Table of contents">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../202-happy-number/" class="navigation navigation-next " aria-label="Next page: 202. Happy Number">
+                <a href="Solution1.html" class="navigation navigation-next " aria-label="Next page: Approach 1: Recursive Approach">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -580,7 +549,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Approach 4: Bit Manipulation","level":"2.2.4","depth":2,"next":{"title":"202. Happy Number","level":"2.3","depth":1,"path":"leetcode/202-happy-number/README.md","ref":"leetcode/202-happy-number/README.md","articles":[{"title":"Approach 1: Detect Cycles with a HashSet","level":"2.3.1","depth":2,"path":"leetcode/202-happy-number/Solution1.md","ref":"leetcode/202-happy-number/Solution1.md","articles":[]},{"title":"Approach 2: Floyd's Cycle-Finding Algorithm","level":"2.3.2","depth":2,"path":"leetcode/202-happy-number/Solution2.md","ref":"leetcode/202-happy-number/Solution2.md","articles":[]},{"title":"Approach 3: Hardcoding the Only Cycle","level":"2.3.3","depth":2,"path":"leetcode/202-happy-number/Solution3.md","ref":"leetcode/202-happy-number/Solution3.md","articles":[]}]},"previous":{"title":"Approach 3: Math","level":"2.2.3","depth":2,"path":"leetcode/136-single-number/Solution3.md","ref":"leetcode/136-single-number/Solution3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","katex","expandable-chapters-small","-sharing"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"assets/images/touch-icons/apple-touch-icon-57x57.png","appleTouchMore":{"180x180":"assets/images/touch-icons/apple-touch-icon-180x180.png","152x152":"assets/images/touch-icons/apple-touch-icon-152x152.png","144x144":"assets/images/touch-icons/apple-touch-icon-144x144.png","120x120":"assets/images/touch-icons/apple-touch-icon-120x120.png","114x114":"assets/images/touch-icons/apple-touch-icon-114x114.png","76x76":"assets/images/touch-icons/apple-touch-icon-76x76.png","72x72":"assets/images/touch-icons/apple-touch-icon-72x72.png","57x57":"assets/images/touch-icons/apple-touch-icon-57x57.png"}},"katex":{},"expandable-chapters-small":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"icelam","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Data Structures and Algorithms","links":{"sidebar":{"View on Github":"https://github.com/icelam/data-structures-and-algorithms"}},"gitbook":"*","description":""},"file":{"path":"leetcode/136-single-number/Solution4.md","mtime":"2020-04-12T12:03:59.723Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-12T12:05:13.761Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"24. Swap Nodes in Pairs","level":"2.1","depth":1,"next":{"title":"Approach 1: Recursive Approach","level":"2.1.1","depth":2,"path":"leetcode/24-swap-nodes-in-pairs/Solution1.md","ref":"leetcode/24-swap-nodes-in-pairs/Solution1.md","articles":[]},"previous":{"title":"Table of contents","level":"1.2","depth":1,"path":"SUMMARY.md","ref":"./SUMMARY.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","katex","expandable-chapters-small","-sharing"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"assets/images/touch-icons/apple-touch-icon-57x57.png","appleTouchMore":{"180x180":"assets/images/touch-icons/apple-touch-icon-180x180.png","152x152":"assets/images/touch-icons/apple-touch-icon-152x152.png","144x144":"assets/images/touch-icons/apple-touch-icon-144x144.png","120x120":"assets/images/touch-icons/apple-touch-icon-120x120.png","114x114":"assets/images/touch-icons/apple-touch-icon-114x114.png","76x76":"assets/images/touch-icons/apple-touch-icon-76x76.png","72x72":"assets/images/touch-icons/apple-touch-icon-72x72.png","57x57":"assets/images/touch-icons/apple-touch-icon-57x57.png"}},"katex":{},"expandable-chapters-small":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"icelam","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Data Structures and Algorithms","links":{"sidebar":{"View on Github":"https://github.com/icelam/data-structures-and-algorithms"}},"gitbook":"*","description":""},"file":{"path":"leetcode/24-swap-nodes-in-pairs/README.md","mtime":"2020-04-12T12:03:59.727Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-12T12:05:13.761Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
