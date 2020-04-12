@@ -3,6 +3,9 @@
 * [Table of contents](./SUMMARY.md)
 
 ## LeetCode
+  * [24. Swap Nodes in Pairs](leetcode/24-swap-nodes-in-pairs/README.md)
+    * [Approach 1: Recursive Approach](leetcode/24-swap-nodes-in-pairs/Solution1.md)
+    * [Approach 2: Iterative Approach](leetcode/24-swap-nodes-in-pairs/Solution2.md)
   * [136. Single Number](leetcode/136-single-number/README.md)
     * [Approach 1: List operation](leetcode/136-single-number/Solution1.md)
     * [Approach 2: Hash Table](leetcode/136-single-number/Solution2.md)
