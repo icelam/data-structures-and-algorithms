@@ -14,7 +14,7 @@ Therefore, we can just hardcode a **HashSet** containing these numbers, and if w
 
 ### Implementation
 
-Java: 
+{% codegroup %}
 ```Java
 class Solution {
     private static Set<Integer> cycleMembers =
@@ -39,8 +39,6 @@ class Solution {
     }
 }
 ```
-
-Python:
 ```Python
 def isHappy(self, n: int) -> bool:
     cycle_members = {4, 16, 37, 58, 89, 145, 42, 20}
@@ -57,6 +55,7 @@ def isHappy(self, n: int) -> bool:
 
     return n == 1
 ```
+{% endcodegroup %}
 
 ### Complexity Analysis
 

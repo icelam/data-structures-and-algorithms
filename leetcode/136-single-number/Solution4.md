@@ -15,7 +15,7 @@ So we can XOR all bits together to find the unique number.
 
 ### Implementation
 
-Java:
+{% codegroup %}
 ```Java
 class Solution {
   public int singleNumber(int[] nums) {
@@ -27,8 +27,6 @@ class Solution {
   }
 }
 ```
-
-Python:
 ```Python
 class Solution(object):
     def singleNumber(self, nums):
@@ -41,6 +39,7 @@ class Solution(object):
             a ^= i
         return a
 ```
+{% endcodegroup %}
 
 ## Complexity Analysis
 

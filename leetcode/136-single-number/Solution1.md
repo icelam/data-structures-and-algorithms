@@ -11,7 +11,7 @@
 
 ### Implementation
 
-Java:
+{% codegroup %}
 ```Java
 class Solution {
   public int singleNumber(int[] nums) {
@@ -28,8 +28,6 @@ class Solution {
   }
 }
 ```
-
-Python:
 ```Python
 class Solution(object):
     def singleNumber(self, nums):
@@ -45,6 +43,7 @@ class Solution(object):
                 no_duplicate_list.remove(i)
         return no_duplicate_list.pop()
 ```
+{% endcodegroup %}
 
 ## Complexity Analysis
 

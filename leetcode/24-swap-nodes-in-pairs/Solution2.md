@@ -28,7 +28,7 @@ This is an iterative step, so the nodes are swapped on the go and attached to th
 
 ### Implementation
 
-Java: 
+{% codegroup %}
 ```Java
 /**
  * Definition for singly-linked list.
@@ -69,8 +69,6 @@ class Solution {
     }
 }
 ```
-
-Python:
 ```Python
 # Definition for singly-linked list.
 # class ListNode:
@@ -109,6 +107,7 @@ class Solution:
         # Return the new head node.
         return dummy.next
 ```
+{% endcodegroup %}
 
 ### Complexity Analysis
 * Time Complexity: $$O(n)$$, where $$n$$ is the size of the linked list.

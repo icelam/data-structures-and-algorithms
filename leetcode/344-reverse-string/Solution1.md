@@ -26,7 +26,7 @@ To solve the problem, call helper function passing the head and tail indexes as 
 
 ### Implementation
 
-Java: 
+{% codegroup %}
 ```Java
 class Solution {
   public void helper(char[] s, int left, int right) {
@@ -42,8 +42,6 @@ class Solution {
   }
 }
 ```
-
-Python:
 ```Python
 class Solution:
     def reverseString(self, s):
@@ -54,6 +52,7 @@ class Solution:
 
         helper(0, len(s) - 1)
 ```
+{% endcodegroup %}
 
 ### Complexity Analysis
 

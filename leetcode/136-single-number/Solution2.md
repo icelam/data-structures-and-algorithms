@@ -11,7 +11,7 @@ We use hash table to avoid the $$O(n)$$ time required for searching the elements
 
 ### Implementation
 
-Java:
+{% codegroup %}
 ```Java
 class Solution {
   public int singleNumber(int[] nums) {
@@ -29,8 +29,6 @@ class Solution {
   }
 }
 ```
-
-Python:
 ```Python
 from collections import defaultdict
 class Solution:
@@ -43,6 +41,7 @@ class Solution:
             if hash_table[i] == 1:
                 return i
 ```
+{% endcodegroup %}
 
 ## Complexity Analysis
 

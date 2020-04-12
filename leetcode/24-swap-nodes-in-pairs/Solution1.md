@@ -32,7 +32,7 @@ In every function call we take out two nodes which would be swapped and the rema
 
 ### Implementation
 
-Java: 
+{% codegroup %}
 ```Java
 /**
  * Definition for singly-linked list.
@@ -63,8 +63,6 @@ class Solution {
     }
 }
 ```
-
-Python:
 ```Python
 # Definition for singly-linked list.
 # class ListNode(object):
@@ -95,6 +93,7 @@ class Solution(object):
         # Now the head is the second node
         return second_node
 ```
+{% endcodegroup %}
 
 ### Complexity Analysis
 * Time Complexity: $$O(n)$$, where $$n$$ is the size of the linked list.

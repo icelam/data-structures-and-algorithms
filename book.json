@@ -11,10 +11,12 @@
     "favicon",
     "katex",
     "expandable-chapters-small",
+    "codegroup",
+    "styles-sass-fix",
     "-sharing"
   ],
   "styles": {
-    "website": "assets/css/website.css"
+    "website": "assets/css/website.scss"
   },
   "pluginsConfig": {
     "favicon": {
@@ -31,6 +33,11 @@
         "72x72": "assets/images/touch-icons/apple-touch-icon-72x72.png",
         "57x57": "assets/images/touch-icons/apple-touch-icon-57x57.png"
       }
+    },
+    "fontsettings": {
+      "theme": "night",
+      "family": "sans",
+      "size": 1
     }
   }
 }

@@ -11,17 +11,20 @@
   display: none;
 }
 
-.page-inner code, .page-inner pre {
-  border-radius: 0.3125em;
+.page-inner {
+  code, pre {
+    border-radius: 0.3125em;
+  }
 }
 
-.color-theme-1 #book-search-input,
-.color-theme-2 #book-search-input {
-  background: rgba(255, 255, 255, 0.1);
+.color-theme-1,
+.color-theme-2 {
+  #book-search-input {
+    background: rgba(255, 255, 255, 0.1);
+  }
 }
 
 .markdown-section sup,
 .markdown-section sub {
   font-size: 0.75em;
 }
-/* --- /Gitbook reset --- */

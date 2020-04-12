@@ -19,7 +19,7 @@ Based on our exploration so far, we’d expect continually following links to en
 
 That 3<sup>rd</sup> option sounds really annoying to detect and handle. How would we even know that it is going to continue going up, rather than eventually going back down, possibly to 1?1? Luckily, it turns out we don’t need to worry about it. Think carefully about what the largest next number we could get for each number of digits is.
 
-| Digits | Largest       | next |
+| Digits | Largest       | Next |
 |--------|---------------|------|
 | 1      | 9             | 81   |
 | 2      | 99            | 162  |
@@ -48,7 +48,7 @@ The reason we use a **HashSet** and not a Vector, List, or Array is because we�
 
 ### Implementation
 
-Java: 
+{% codegroup %}
 ```Java
 class Solution {
     private int getNext(int n) {
@@ -71,8 +71,6 @@ class Solution {
     }
 }
 ```
-
-Python:
 ```Python
 def isHappy(self, n: int) -> bool:
     def get_next(n):
@@ -89,6 +87,7 @@ def isHappy(self, n: int) -> bool:
 
     return n == 1
 ```
+{% endcodegroup %}
 
 ### Complexity Analysis
 

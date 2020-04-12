@@ -1,0 +1,92 @@
+/* --- Codegroup overrides ---*/
+.book .book-body .page-wrapper .page-inner section.normal .gbcg {
+  .gbcg-tab-selectors {
+    border-bottom: none;
+
+    &:after {
+      content: ".";
+      display: block;
+      font-size: 0;
+      line-height: 0;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+  }
+
+  .gbcg-tab-contents #gbcg-tab-container {
+    border-radius: 0.3125em;
+    border-top-left-radius: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color-gbcg-border !important;
+    margin-bottom: 1.275em;
+    background-color: $color-gbcg-active-background;
+
+    pre {
+      margin: 0;
+      border-radius: 0.3125em;
+    }
+  }
+
+  a.gbcg-selector {
+    color: $color-gbcg-text;
+    padding: 3px 15px;
+    font-weight: normal;
+    background-color: transparent;
+    border-top-left-radius: 0.3125em;
+    border-top-right-radius: 0.3125em;
+    border: 1px solid $color-gbcg-border;
+    border-bottom: 0;
+    margin-bottom: -1px;
+    margin-left: 0;
+    margin-right: -1px;
+    opacity: 0.5;
+    float: left;
+
+    &.gbcg-active {
+      color: $color-gbcg-text;
+      background-color: $color-gbcg-active-background;
+      border-width: 1px;
+      border-bottom: 0;
+      border-top: 1px solid $color-gbcg-border;
+      opacity: 1;
+    }
+  }
+}
+
+.book.color-theme-1 .book-body .page-wrapper .page-inner section.normal .gbcg {
+  .gbcg-tab-contents #gbcg-tab-container {
+    border-color: $color-gbcg-border-1 !important;
+    background-color: $color-gbcg-active-background-1;
+  }
+
+  a.gbcg-selector {
+    color: $color-gbcg-text-1;
+    border-color: $color-gbcg-border-1;
+
+    &.gbcg-active {
+      color: $color-gbcg-text-1;
+      background-color: $color-gbcg-active-background-1;
+      border-color: $color-gbcg-border-1;
+    }
+  }
+}
+
+.book.color-theme-2 .book-body .page-wrapper .page-inner section.normal .gbcg {
+  .gbcg-tab-contents #gbcg-tab-container {
+    border-color: $color-gbcg-border-2 !important;
+    background-color: $color-gbcg-active-background-2;
+  }
+
+  a.gbcg-selector {
+    color: $color-gbcg-text-2;
+    border-color: $color-gbcg-border-2;
+
+    &.gbcg-active {
+      color: $color-gbcg-text-2;
+      background-color: $color-gbcg-active-background-2;
+      border-color: $color-gbcg-border-2;
+    }
+  }
+}

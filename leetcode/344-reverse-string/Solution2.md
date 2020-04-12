@@ -20,7 +20,7 @@ Sometimes one needs to generalize this approach in order to use three pointers, 
 
 ### Implementation
 
-Java: 
+{% codegroup %}
 ```Java
 class Solution {
     public void reverseString(char[] s) {
@@ -33,8 +33,6 @@ class Solution {
     }
 }
 ```
-
-Python:
 ```Python
 class Solution:
     def reverseString(self, s):
@@ -43,6 +41,7 @@ class Solution:
             s[left], s[right] = s[right], s[left]
             left, right = left + 1, right - 1
 ```
+{% endcodegroup %}
 
 ### Complexity Analysis
 

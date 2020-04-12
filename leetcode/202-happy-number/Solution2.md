@@ -29,7 +29,7 @@ If `n` is not a happy number, then eventually the fast runner and the slow runne
 
 ### Implementation
 
-Java: 
+{% codegroup %}
 ```Java
 class Solution {
      public int getNext(int n) {
@@ -53,8 +53,6 @@ class Solution {
     }
 }
 ```
-
-Python:
 ```Python
 def isHappy(self, n: int) -> bool:  
     def get_next(number):
@@ -71,6 +69,7 @@ def isHappy(self, n: int) -> bool:
         fast_runner = get_next(get_next(fast_runner))
     return fast_runner == 1
 ```
+{% endcodegroup %}
 
 ### Complexity Analysis
 

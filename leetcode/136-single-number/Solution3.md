@@ -9,7 +9,7 @@ $$2 * (a + b + c) - (a + a + b + b + c) = c$$
 
 ### Implementation
 
-Java:
+{% codegroup %}
 ```Java
 class Solution {
   public int singleNumber(int[] nums) {
@@ -27,8 +27,6 @@ class Solution {
   }
 }
 ```
-
-Python:
 ```Python
 class Solution(object):
     def singleNumber(self, nums):
@@ -38,6 +36,7 @@ class Solution(object):
         """
         return 2 * sum(set(nums)) - sum(nums)
 ```
+{% endcodegroup %}
 
 ## Complexity Analysis
 
