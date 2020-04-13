@@ -15,5 +15,5 @@ Given 1->2->3->4, you should return the list as 2->1->4->3.
 ```
 
 ## Solution
-* [Approach 1: Recursive Approach](./Solution1.md)
-* [Approach 2: Iterative Approach](./Solution2.md)
+* [Approach 1: Recursive Approach](./solution-1.md)
+* [Approach 2: Iterative Approach](./solution-2.md)

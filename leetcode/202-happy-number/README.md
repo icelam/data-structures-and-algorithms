@@ -22,6 +22,6 @@ Explanation:
 ```
 
 ## Solution
-* [Approach 1: Detect Cycles with a HashSet](./Solution1.md)
-* [Approach 2: Floyd's Cycle-Finding Algorithm](./Solution2.md)
-* [Approach 3: Hardcoding the Only Cycle](./Solution3.md)
+* [Approach 1: Detect Cycles with a HashSet](./solution-1.md)
+* [Approach 2: Floyd's Cycle-Finding Algorithm](./solution-2.md)
+* [Approach 3: Hardcoding the Only Cycle](./solution-3.md)

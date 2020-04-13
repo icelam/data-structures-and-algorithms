@@ -23,8 +23,8 @@ Output: ["h","a","n","n","a","H"]
 ```
 
 ## Solution
-* [Approach 1: Recursion, In-Place](./Solution1.md)
-* [Approach 2: Two Pointers, Iteration](./Solution2.md)
+* [Approach 1: Recursion, In-Place](./solution-1.md)
+* [Approach 2: Two Pointers, Iteration](./solution-2.md)
 
 
 

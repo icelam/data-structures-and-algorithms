@@ -24,7 +24,7 @@ Output: 4
 ```
 
 ## Solution
-* [Approach 1: List operation](./Solution1.md)
-* [Approach 2: Hash Table](./Solution2.md)
-* [Approach 3: Math](./Solution3.md)
-* [Approach 4: Bit Manipulation](./Solution4.md)
+* [Approach 1: List operation](./solution-1.md)
+* [Approach 2: Hash Table](./solution-2.md)
+* [Approach 3: Math](./solution-3.md)
+* [Approach 4: Bit Manipulation](./solution-4.md)

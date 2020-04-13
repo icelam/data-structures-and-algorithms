@@ -17,5 +17,5 @@ Output: 5->4->3->2->1->NULL
 A linked list can be reversed either iteratively or recursively. Could you implement both?
 
 ## Solution
-* [Approach 1: Iterative](./Solution1.md)
-* [Approach 2: Recursive](./Solution2.md)
+* [Approach 1: Iterative](./solution-1.md)
+* [Approach 2: Recursive](./solution-2.md)
