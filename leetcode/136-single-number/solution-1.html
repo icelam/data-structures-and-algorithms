@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>136. Single Number · Data Structures and Algorithms</title>
+        <title>Approach 1: List operation · Data Structures and Algorithms</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -62,10 +62,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="solution-1.html" />
+    <link rel="next" href="solution-2.html" />
     
     
-    <link rel="prev" href="../24-swap-nodes-in-pairs/solution-2.html" />
+    <link rel="prev" href="./" />
     
 
     
@@ -245,7 +245,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.2" data-path="./">
+        <li class="chapter " data-level="3.2" data-path="./">
             
                 <a href="./">
             
@@ -259,7 +259,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.2.1" data-path="solution-1.html">
+        <li class="chapter active" data-level="3.2.1" data-path="solution-1.html">
             
                 <a href="solution-1.html">
             
@@ -514,7 +514,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >136. Single Number</a>
+        <a href="../.." >Approach 1: List operation</a>
     </h1>
 </div>
 
@@ -530,26 +530,87 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="136-single-number">136. Single Number</h1>
-<blockquote>
-<p>Level: Easy<br>Link: <a href="https://leetcode.com/problems/single-number/" target="_blank">https://leetcode.com/problems/single-number/</a></p>
-</blockquote>
-<h2 id="problem">Problem</h2>
-<p>Given a <strong>non-empty</strong> array of integers, every element appears twice except for one. Find that single one.</p>
-<h4 id="note">Note:</h4>
-<p>Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?</p>
-<h4 id="example-1">Example 1</h4>
-<pre><code>Input: [2,2,1]
-Output: 1
-Example 2:
-</code></pre><h4 id="example-2">Example 2</h4>
-<pre><code>Input: [4,1,2,1,2]
-Output: 4
-</code></pre><h2 id="solution">Solution</h2>
+<p><a href="./">&#x2190;&#xA0;Back to problem</a></p>
+<h2 id="approach-1-list-operation">Approach 1: List operation</h2>
+<h3 id="algorithm">Algorithm</h3>
+<ol>
+<li>Iterate over all the elements in <code>nums</code></li>
+<li>If some number in <code>nums</code> is new to array, append it</li>
+<li>If some number is already in the array, remove it</li>
+</ol>
+<h3 id="implementation">Implementation</h3>
+<p><div id="54b39262ff5c175a8509f48f2ebd8705" class="gbcg gbcg-codegroup" data-remember-tabs="false">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-bdfb7872ad36adcf25885ce9aceb410d" class="gbcg-selector gbcg-active" data-tab="Java-0-bdfb7872ad36adcf25885ce9aceb410d">Java</a>
+    <a id="select-Python-1-9d70c0c6902d4507e88f4de8bda970d6" class="gbcg-selector" data-tab="Python-1-9d70c0c6902d4507e88f4de8bda970d6">Python</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-bdfb7872ad36adcf25885ce9aceb410d" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">singleNumber</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>{
+    List&lt;Integer&gt; no_duplicate_list = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i : nums) {
+      <span class="hljs-keyword">if</span> (!no_duplicate_list.contains(i)) {
+        no_duplicate_list.add(i);
+      } <span class="hljs-keyword">else</span> {
+        no_duplicate_list.remove(<span class="hljs-keyword">new</span> Integer(i));
+      }
+    }
+    <span class="hljs-keyword">return</span> no_duplicate_list.get(<span class="hljs-number">0</span>);
+  }
+}
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-bdfb7872ad36adcf25885ce9aceb410d" id="java">Java</h3>
+        <div id="Java-0-bdfb7872ad36adcf25885ce9aceb410d" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">singleNumber</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>{
+    List&lt;Integer&gt; no_duplicate_list = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i : nums) {
+      <span class="hljs-keyword">if</span> (!no_duplicate_list.contains(i)) {
+        no_duplicate_list.add(i);
+      } <span class="hljs-keyword">else</span> {
+        no_duplicate_list.remove(<span class="hljs-keyword">new</span> Integer(i));
+      }
+    }
+    <span class="hljs-keyword">return</span> no_duplicate_list.get(<span class="hljs-number">0</span>);
+  }
+}
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Python-1-9d70c0c6902d4507e88f4de8bda970d6" id="python">Python</h3>
+        <div id="Python-1-9d70c0c6902d4507e88f4de8bda970d6" class="gbcg-tab-item gbcb-Python">
+          <pre><code class="lang-Python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">singleNumber</span><span class="hljs-params">(self, nums)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;
+        :type nums: List[int]
+        :rtype: int
+        &quot;&quot;&quot;</span>
+        no_duplicate_list = []
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> nums:
+            <span class="hljs-keyword">if</span> i <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> no_duplicate_list:
+                no_duplicate_list.append(i)
+            <span class="hljs-keyword">else</span>:
+                no_duplicate_list.remove(i)
+        <span class="hljs-keyword">return</span> no_duplicate_list.pop()
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<h2 id="complexity-analysis">Complexity Analysis</h2>
 <ul>
-<li><a href="solution-1.html">Approach 1: List operation</a></li>
-<li><a href="solution-2.html">Approach 2: Hash Table</a></li>
-<li><a href="solution-3.html">Approach 3: Math</a></li>
-<li><a href="solution-4.html">Approach 4: Bit Manipulation</a></li>
+<li>Time complexity : <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span></span>. We iterate through <code>nums</code>, taking <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span> time. We search the whole list to find whether there is duplicate number, taking <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span> time. Because search is in the <code>for</code> loop, so we have to multiply both time complexities which is <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span></span>.</li>
+<li>Space complexity : <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>. We need a list of size <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span> to contain elements in <code>nums</code>.</li>
 </ul>
 
                                 
@@ -578,12 +639,12 @@ Output: 4
 
             
                 
-                <a href="../24-swap-nodes-in-pairs/solution-2.html" class="navigation navigation-prev " aria-label="Previous page: Approach 2: Iterative Approach">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 136. Single Number">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="solution-1.html" class="navigation navigation-next " aria-label="Next page: Approach 1: List operation">
+                <a href="solution-2.html" class="navigation navigation-next " aria-label="Next page: Approach 2: Hash Table">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -594,7 +655,7 @@ Output: 4
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"136. Single Number","level":"3.2","depth":1,"next":{"title":"Approach 1: List operation","level":"3.2.1","depth":2,"path":"leetcode/136-single-number/solution-1.md","ref":"leetcode/136-single-number/solution-1.md","articles":[]},"previous":{"title":"Approach 2: Iterative Approach","level":"3.1.2","depth":2,"path":"leetcode/24-swap-nodes-in-pairs/solution-2.md","ref":"leetcode/24-swap-nodes-in-pairs/solution-2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","katex","expandable-chapters-small","codegroup","styles-sass-fix","-sharing"],"styles":{"website":"website-1586800134769.css"},"pluginsConfig":{"styles-sass-fix":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"fontsettings":{"theme":"night","family":"sans","size":1},"highlight":{},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"assets/images/touch-icons/apple-touch-icon-57x57.png","appleTouchMore":{"180x180":"assets/images/touch-icons/apple-touch-icon-180x180.png","152x152":"assets/images/touch-icons/apple-touch-icon-152x152.png","144x144":"assets/images/touch-icons/apple-touch-icon-144x144.png","120x120":"assets/images/touch-icons/apple-touch-icon-120x120.png","114x114":"assets/images/touch-icons/apple-touch-icon-114x114.png","76x76":"assets/images/touch-icons/apple-touch-icon-76x76.png","72x72":"assets/images/touch-icons/apple-touch-icon-72x72.png","57x57":"assets/images/touch-icons/apple-touch-icon-57x57.png"}},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"icelam","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Data Structures and Algorithms","links":{"sidebar":{"View on Github":"https://github.com/icelam/data-structures-and-algorithms"}},"gitbook":"*","description":""},"file":{"path":"leetcode/136-single-number/README.md","mtime":"2020-04-13T17:47:21.009Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-13T17:48:53.567Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Approach 1: List operation","level":"3.2.1","depth":2,"next":{"title":"Approach 2: Hash Table","level":"3.2.2","depth":2,"path":"leetcode/136-single-number/solution-2.md","ref":"leetcode/136-single-number/solution-2.md","articles":[]},"previous":{"title":"136. Single Number","level":"3.2","depth":1,"path":"leetcode/136-single-number/README.md","ref":"leetcode/136-single-number/README.md","articles":[{"title":"Approach 1: List operation","level":"3.2.1","depth":2,"path":"leetcode/136-single-number/solution-1.md","ref":"leetcode/136-single-number/solution-1.md","articles":[]},{"title":"Approach 2: Hash Table","level":"3.2.2","depth":2,"path":"leetcode/136-single-number/solution-2.md","ref":"leetcode/136-single-number/solution-2.md","articles":[]},{"title":"Approach 3: Math","level":"3.2.3","depth":2,"path":"leetcode/136-single-number/solution-3.md","ref":"leetcode/136-single-number/solution-3.md","articles":[]},{"title":"Approach 4: Bit Manipulation","level":"3.2.4","depth":2,"path":"leetcode/136-single-number/solution-4.md","ref":"leetcode/136-single-number/solution-4.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["favicon","katex","expandable-chapters-small","codegroup","styles-sass-fix","-sharing"],"styles":{"website":"website-1586800134769.css"},"pluginsConfig":{"styles-sass-fix":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"fontsettings":{"theme":"night","family":"sans","size":1},"highlight":{},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"assets/images/touch-icons/apple-touch-icon-57x57.png","appleTouchMore":{"180x180":"assets/images/touch-icons/apple-touch-icon-180x180.png","152x152":"assets/images/touch-icons/apple-touch-icon-152x152.png","144x144":"assets/images/touch-icons/apple-touch-icon-144x144.png","120x120":"assets/images/touch-icons/apple-touch-icon-120x120.png","114x114":"assets/images/touch-icons/apple-touch-icon-114x114.png","76x76":"assets/images/touch-icons/apple-touch-icon-76x76.png","72x72":"assets/images/touch-icons/apple-touch-icon-72x72.png","57x57":"assets/images/touch-icons/apple-touch-icon-57x57.png"}},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"icelam","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Data Structures and Algorithms","links":{"sidebar":{"View on Github":"https://github.com/icelam/data-structures-and-algorithms"}},"gitbook":"*","description":""},"file":{"path":"leetcode/136-single-number/solution-1.md","mtime":"2020-04-13T17:47:21.009Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-13T17:48:53.567Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

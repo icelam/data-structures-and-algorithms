@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>136. Single Number · Data Structures and Algorithms</title>
+        <title>Approach 2: Hash Table · Data Structures and Algorithms</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -62,10 +62,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="solution-1.html" />
+    <link rel="next" href="solution-3.html" />
     
     
-    <link rel="prev" href="../24-swap-nodes-in-pairs/solution-2.html" />
+    <link rel="prev" href="solution-1.html" />
     
 
     
@@ -245,7 +245,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.2" data-path="./">
+        <li class="chapter " data-level="3.2" data-path="./">
             
                 <a href="./">
             
@@ -272,7 +272,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.2" data-path="solution-2.html">
+        <li class="chapter active" data-level="3.2.2" data-path="solution-2.html">
             
                 <a href="solution-2.html">
             
@@ -514,7 +514,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >136. Single Number</a>
+        <a href="../.." >Approach 2: Hash Table</a>
     </h1>
 </div>
 
@@ -530,26 +530,86 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="136-single-number">136. Single Number</h1>
-<blockquote>
-<p>Level: Easy<br>Link: <a href="https://leetcode.com/problems/single-number/" target="_blank">https://leetcode.com/problems/single-number/</a></p>
-</blockquote>
-<h2 id="problem">Problem</h2>
-<p>Given a <strong>non-empty</strong> array of integers, every element appears twice except for one. Find that single one.</p>
-<h4 id="note">Note:</h4>
-<p>Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?</p>
-<h4 id="example-1">Example 1</h4>
-<pre><code>Input: [2,2,1]
-Output: 1
-Example 2:
-</code></pre><h4 id="example-2">Example 2</h4>
-<pre><code>Input: [4,1,2,1,2]
-Output: 4
-</code></pre><h2 id="solution">Solution</h2>
+<p><a href="./">&#x2190;&#xA0;Back to problem</a></p>
+<h2 id="approach-2-hash-table">Approach 2: Hash Table</h2>
+<h3 id="algorithm">Algorithm</h3>
+<p>We use hash table to avoid the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span> time required for searching the elements.</p>
+<ol>
+<li>Iterate through all elements in <code>nums</code> and set up key/value pair.</li>
+<li>Return the element which appeared only once.</li>
+</ol>
+<h3 id="implementation">Implementation</h3>
+<p><div id="6a601e3f538680bb4313ddc74c855a77" class="gbcg gbcg-codegroup" data-remember-tabs="false">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-3e1507c3bc32c88ec94c490bc6a3a133" class="gbcg-selector gbcg-active" data-tab="Java-0-3e1507c3bc32c88ec94c490bc6a3a133">Java</a>
+    <a id="select-Python-1-272fab68b6a13665faec0e8e410e734f" class="gbcg-selector" data-tab="Python-1-272fab68b6a13665faec0e8e410e734f">Python</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-3e1507c3bc32c88ec94c490bc6a3a133" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">singleNumber</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>{
+    HashMap&lt;Integer, Integer&gt; hash_table = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i : nums) {
+      hash_table.put(i, hash_table.getOrDefault(i, <span class="hljs-number">0</span>) + <span class="hljs-number">1</span>);
+    }
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i : nums) {
+      <span class="hljs-keyword">if</span> (hash_table.get(i) == <span class="hljs-number">1</span>) {
+        <span class="hljs-keyword">return</span> i;
+      }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+  }
+}
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-3e1507c3bc32c88ec94c490bc6a3a133" id="java">Java</h3>
+        <div id="Java-0-3e1507c3bc32c88ec94c490bc6a3a133" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">singleNumber</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>{
+    HashMap&lt;Integer, Integer&gt; hash_table = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i : nums) {
+      hash_table.put(i, hash_table.getOrDefault(i, <span class="hljs-number">0</span>) + <span class="hljs-number">1</span>);
+    }
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i : nums) {
+      <span class="hljs-keyword">if</span> (hash_table.get(i) == <span class="hljs-number">1</span>) {
+        <span class="hljs-keyword">return</span> i;
+      }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+  }
+}
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Python-1-272fab68b6a13665faec0e8e410e734f" id="python">Python</h3>
+        <div id="Python-1-272fab68b6a13665faec0e8e410e734f" class="gbcg-tab-item gbcb-Python">
+          <pre><code class="lang-Python"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> defaultdict
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">singleNumber</span><span class="hljs-params">(self, nums: List[int])</span> -&gt; int:</span>
+        hash_table = defaultdict(int)
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> nums:
+            hash_table[i] += <span class="hljs-number">1</span>
+
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> hash_table:
+            <span class="hljs-keyword">if</span> hash_table[i] == <span class="hljs-number">1</span>:
+                <span class="hljs-keyword">return</span> i
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<h2 id="complexity-analysis">Complexity Analysis</h2>
 <ul>
-<li><a href="solution-1.html">Approach 1: List operation</a></li>
-<li><a href="solution-2.html">Approach 2: Hash Table</a></li>
-<li><a href="solution-3.html">Approach 3: Math</a></li>
-<li><a href="solution-4.html">Approach 4: Bit Manipulation</a></li>
+<li>Time complexity : <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>&#x22C5;</mo><mn>1</mn><mo>)</mo><mo>=</mo><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n \cdot 1) = O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mbin">&#x22C5;</span><span class="mord mathrm">1</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>. Time complexity of <code>for</code> loop is <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>. Time complexity of hash table (dictionary in python) operation <code>pop</code> is <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mclose">)</span></span></span></span>.</li>
+<li>Space complexity : <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>. The space required by <code>hash_table</code> is equal to the number of elements in <code>nums</code>.</li>
 </ul>
 
                                 
@@ -578,12 +638,12 @@ Output: 4
 
             
                 
-                <a href="../24-swap-nodes-in-pairs/solution-2.html" class="navigation navigation-prev " aria-label="Previous page: Approach 2: Iterative Approach">
+                <a href="solution-1.html" class="navigation navigation-prev " aria-label="Previous page: Approach 1: List operation">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="solution-1.html" class="navigation navigation-next " aria-label="Next page: Approach 1: List operation">
+                <a href="solution-3.html" class="navigation navigation-next " aria-label="Next page: Approach 3: Math">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -594,7 +654,7 @@ Output: 4
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"136. Single Number","level":"3.2","depth":1,"next":{"title":"Approach 1: List operation","level":"3.2.1","depth":2,"path":"leetcode/136-single-number/solution-1.md","ref":"leetcode/136-single-number/solution-1.md","articles":[]},"previous":{"title":"Approach 2: Iterative Approach","level":"3.1.2","depth":2,"path":"leetcode/24-swap-nodes-in-pairs/solution-2.md","ref":"leetcode/24-swap-nodes-in-pairs/solution-2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","katex","expandable-chapters-small","codegroup","styles-sass-fix","-sharing"],"styles":{"website":"website-1586800134769.css"},"pluginsConfig":{"styles-sass-fix":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"fontsettings":{"theme":"night","family":"sans","size":1},"highlight":{},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"assets/images/touch-icons/apple-touch-icon-57x57.png","appleTouchMore":{"180x180":"assets/images/touch-icons/apple-touch-icon-180x180.png","152x152":"assets/images/touch-icons/apple-touch-icon-152x152.png","144x144":"assets/images/touch-icons/apple-touch-icon-144x144.png","120x120":"assets/images/touch-icons/apple-touch-icon-120x120.png","114x114":"assets/images/touch-icons/apple-touch-icon-114x114.png","76x76":"assets/images/touch-icons/apple-touch-icon-76x76.png","72x72":"assets/images/touch-icons/apple-touch-icon-72x72.png","57x57":"assets/images/touch-icons/apple-touch-icon-57x57.png"}},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"icelam","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Data Structures and Algorithms","links":{"sidebar":{"View on Github":"https://github.com/icelam/data-structures-and-algorithms"}},"gitbook":"*","description":""},"file":{"path":"leetcode/136-single-number/README.md","mtime":"2020-04-13T17:47:21.009Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-13T17:48:53.567Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Approach 2: Hash Table","level":"3.2.2","depth":2,"next":{"title":"Approach 3: Math","level":"3.2.3","depth":2,"path":"leetcode/136-single-number/solution-3.md","ref":"leetcode/136-single-number/solution-3.md","articles":[]},"previous":{"title":"Approach 1: List operation","level":"3.2.1","depth":2,"path":"leetcode/136-single-number/solution-1.md","ref":"leetcode/136-single-number/solution-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","katex","expandable-chapters-small","codegroup","styles-sass-fix","-sharing"],"styles":{"website":"website-1586800134769.css"},"pluginsConfig":{"styles-sass-fix":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"fontsettings":{"theme":"night","family":"sans","size":1},"highlight":{},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"assets/images/touch-icons/apple-touch-icon-57x57.png","appleTouchMore":{"180x180":"assets/images/touch-icons/apple-touch-icon-180x180.png","152x152":"assets/images/touch-icons/apple-touch-icon-152x152.png","144x144":"assets/images/touch-icons/apple-touch-icon-144x144.png","120x120":"assets/images/touch-icons/apple-touch-icon-120x120.png","114x114":"assets/images/touch-icons/apple-touch-icon-114x114.png","76x76":"assets/images/touch-icons/apple-touch-icon-76x76.png","72x72":"assets/images/touch-icons/apple-touch-icon-72x72.png","57x57":"assets/images/touch-icons/apple-touch-icon-57x57.png"}},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"icelam","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Data Structures and Algorithms","links":{"sidebar":{"View on Github":"https://github.com/icelam/data-structures-and-algorithms"}},"gitbook":"*","description":""},"file":{"path":"leetcode/136-single-number/solution-2.md","mtime":"2020-04-13T17:47:21.009Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-13T17:48:53.567Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

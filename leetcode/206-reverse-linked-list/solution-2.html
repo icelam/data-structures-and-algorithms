@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>136. Single Number · Data Structures and Algorithms</title>
+        <title>Approach 2: Recursive · Data Structures and Algorithms</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -62,10 +62,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="solution-1.html" />
+    <link rel="next" href="../344-reverse-string/" />
     
     
-    <link rel="prev" href="../24-swap-nodes-in-pairs/solution-2.html" />
+    <link rel="prev" href="solution-1.html" />
     
 
     
@@ -245,9 +245,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.2" data-path="./">
+        <li class="chapter " data-level="3.2" data-path="../136-single-number/">
             
-                <a href="./">
+                <a href="../136-single-number/">
             
                     
                     136. Single Number
@@ -259,9 +259,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.2.1" data-path="solution-1.html">
+        <li class="chapter " data-level="3.2.1" data-path="../136-single-number/solution-1.html">
             
-                <a href="solution-1.html">
+                <a href="../136-single-number/solution-1.html">
             
                     
                     Approach 1: List operation
@@ -272,9 +272,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.2" data-path="solution-2.html">
+        <li class="chapter " data-level="3.2.2" data-path="../136-single-number/solution-2.html">
             
-                <a href="solution-2.html">
+                <a href="../136-single-number/solution-2.html">
             
                     
                     Approach 2: Hash Table
@@ -285,9 +285,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.3" data-path="solution-3.html">
+        <li class="chapter " data-level="3.2.3" data-path="../136-single-number/solution-3.html">
             
-                <a href="solution-3.html">
+                <a href="../136-single-number/solution-3.html">
             
                     
                     Approach 3: Math
@@ -298,9 +298,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.4" data-path="solution-4.html">
+        <li class="chapter " data-level="3.2.4" data-path="../136-single-number/solution-4.html">
             
-                <a href="solution-4.html">
+                <a href="../136-single-number/solution-4.html">
             
                     
                     Approach 4: Bit Manipulation
@@ -374,9 +374,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="../206-reverse-linked-list/">
+        <li class="chapter " data-level="3.4" data-path="./">
             
-                <a href="../206-reverse-linked-list/">
+                <a href="./">
             
                     
                     206. Reverse Linked List
@@ -388,9 +388,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.4.1" data-path="../206-reverse-linked-list/solution-1.html">
+        <li class="chapter " data-level="3.4.1" data-path="solution-1.html">
             
-                <a href="../206-reverse-linked-list/solution-1.html">
+                <a href="solution-1.html">
             
                     
                     Approach 1: Iterative
@@ -401,9 +401,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4.2" data-path="../206-reverse-linked-list/solution-2.html">
+        <li class="chapter active" data-level="3.4.2" data-path="solution-2.html">
             
-                <a href="../206-reverse-linked-list/solution-2.html">
+                <a href="solution-2.html">
             
                     
                     Approach 2: Recursive
@@ -514,7 +514,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >136. Single Number</a>
+        <a href="../.." >Approach 2: Recursive</a>
     </h1>
 </div>
 
@@ -529,27 +529,29 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="136-single-number">136. Single Number</h1>
-<blockquote>
-<p>Level: Easy<br>Link: <a href="https://leetcode.com/problems/single-number/" target="_blank">https://leetcode.com/problems/single-number/</a></p>
-</blockquote>
-<h2 id="problem">Problem</h2>
-<p>Given a <strong>non-empty</strong> array of integers, every element appears twice except for one. Find that single one.</p>
-<h4 id="note">Note:</h4>
-<p>Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?</p>
-<h4 id="example-1">Example 1</h4>
-<pre><code>Input: [2,2,1]
-Output: 1
-Example 2:
-</code></pre><h4 id="example-2">Example 2</h4>
-<pre><code>Input: [4,1,2,1,2]
-Output: 4
-</code></pre><h2 id="solution">Solution</h2>
+                                <h1 id="206-reverse-linked-list">206. Reverse Linked List</h1>
+<p><a href="./">&#x2190;&#xA0;Back to problem</a></p>
+<h2 id="approach-2-recursive">Approach 2: Recursive</h2>
+<p>The recursive version is slightly trickier and the key is to work backwards. Assume that the rest of the list had already been reversed, now how do I reverse the front part? Let&apos;s assume the list is: n<sub>1</sub> &#x2192; &#x2026; &#x2192; n<sub>k-1</sub> &#x2192; n<sub>k</sub> &#x2192; n<sub>k+1</sub> &#x2192; &#x2026; &#x2192; n<sub>m</sub> &#x2192; &#xD8;</p>
+<p>Assume from node n<sub>k+1</sub> to nm had been reversed and you are at node n<sub>k</sub>.</p>
+<p>n<sub>1</sub> &#x2192; &#x2026; &#x2192; n<sub>k-1</sub> &#x2192; <strong>n<sub>k</sub></strong> &#x2192; n<sub>k+1</sub> &#x2190; &#x2026; &#x2190; n<sub>m</sub></p>
+<p>We want n<sub>k+1</sub>&#x2019;s next node to point to nk.</p>
+<p>So,</p>
+<p>n<sub>k</sub>.next.next = n<sub>k</sub>;</p>
+<p>Be very careful that n1&apos;s next must point to &#xD8;. If you forget about this, your linked list has a cycle in it. This bug could be caught if you test your code with a linked list of size 2.</p>
+<h3 id="implementation">Implementation</h3>
+<pre><code class="lang-Java"><span class="hljs-function"><span class="hljs-keyword">public</span> ListNode <span class="hljs-title">reverseList</span><span class="hljs-params">(ListNode head)</span> </span>{
+    <span class="hljs-keyword">if</span> (head == <span class="hljs-keyword">null</span> || head.next == <span class="hljs-keyword">null</span>) <span class="hljs-keyword">return</span> head;
+    ListNode p = reverseList(head.next);
+    head.next.next = head;
+    head.next = <span class="hljs-keyword">null</span>;
+    <span class="hljs-keyword">return</span> p;
+}
+</code></pre>
+<h3 id="complexity-analysis">Complexity Analysis</h3>
 <ul>
-<li><a href="solution-1.html">Approach 1: List operation</a></li>
-<li><a href="solution-2.html">Approach 2: Hash Table</a></li>
-<li><a href="solution-3.html">Approach 3: Math</a></li>
-<li><a href="solution-4.html">Approach 4: Bit Manipulation</a></li>
+<li>Time complexity : <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi>O</mi></mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">{O}(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>. Assume that <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span> is the list&apos;s length, the time complexity is <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi>O</mi></mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">{O}(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>.</li>
+<li>Space complexity : <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi>O</mi></mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">{O}(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>. The extra space comes from implicit stack space due to recursion. The recursion could go up to <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span> levels deep.</li>
 </ul>
 
                                 
@@ -578,12 +580,12 @@ Output: 4
 
             
                 
-                <a href="../24-swap-nodes-in-pairs/solution-2.html" class="navigation navigation-prev " aria-label="Previous page: Approach 2: Iterative Approach">
+                <a href="solution-1.html" class="navigation navigation-prev " aria-label="Previous page: Approach 1: Iterative">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="solution-1.html" class="navigation navigation-next " aria-label="Next page: Approach 1: List operation">
+                <a href="../344-reverse-string/" class="navigation navigation-next " aria-label="Next page: 344. Reverse String">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -594,7 +596,7 @@ Output: 4
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"136. Single Number","level":"3.2","depth":1,"next":{"title":"Approach 1: List operation","level":"3.2.1","depth":2,"path":"leetcode/136-single-number/solution-1.md","ref":"leetcode/136-single-number/solution-1.md","articles":[]},"previous":{"title":"Approach 2: Iterative Approach","level":"3.1.2","depth":2,"path":"leetcode/24-swap-nodes-in-pairs/solution-2.md","ref":"leetcode/24-swap-nodes-in-pairs/solution-2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","katex","expandable-chapters-small","codegroup","styles-sass-fix","-sharing"],"styles":{"website":"website-1586800134769.css"},"pluginsConfig":{"styles-sass-fix":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"fontsettings":{"theme":"night","family":"sans","size":1},"highlight":{},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"assets/images/touch-icons/apple-touch-icon-57x57.png","appleTouchMore":{"180x180":"assets/images/touch-icons/apple-touch-icon-180x180.png","152x152":"assets/images/touch-icons/apple-touch-icon-152x152.png","144x144":"assets/images/touch-icons/apple-touch-icon-144x144.png","120x120":"assets/images/touch-icons/apple-touch-icon-120x120.png","114x114":"assets/images/touch-icons/apple-touch-icon-114x114.png","76x76":"assets/images/touch-icons/apple-touch-icon-76x76.png","72x72":"assets/images/touch-icons/apple-touch-icon-72x72.png","57x57":"assets/images/touch-icons/apple-touch-icon-57x57.png"}},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"icelam","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Data Structures and Algorithms","links":{"sidebar":{"View on Github":"https://github.com/icelam/data-structures-and-algorithms"}},"gitbook":"*","description":""},"file":{"path":"leetcode/136-single-number/README.md","mtime":"2020-04-13T17:47:21.009Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-13T17:48:53.567Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Approach 2: Recursive","level":"3.4.2","depth":2,"next":{"title":"344. Reverse String","level":"3.5","depth":1,"path":"leetcode/344-reverse-string/README.md","ref":"leetcode/344-reverse-string/README.md","articles":[{"title":"Approach 1: Recursion, In-Place","level":"3.5.1","depth":2,"path":"leetcode/344-reverse-string/solution-1.md","ref":"leetcode/344-reverse-string/solution-1.md","articles":[]},{"title":"Approach 2: Two Pointers, Iteration","level":"3.5.2","depth":2,"path":"leetcode/344-reverse-string/solution-2.md","ref":"leetcode/344-reverse-string/solution-2.md","articles":[]}]},"previous":{"title":"Approach 1: Iterative","level":"3.4.1","depth":2,"path":"leetcode/206-reverse-linked-list/solution-1.md","ref":"leetcode/206-reverse-linked-list/solution-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","katex","expandable-chapters-small","codegroup","styles-sass-fix","-sharing"],"styles":{"website":"website-1586800134769.css"},"pluginsConfig":{"styles-sass-fix":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"fontsettings":{"theme":"night","family":"sans","size":1},"highlight":{},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"assets/images/touch-icons/apple-touch-icon-57x57.png","appleTouchMore":{"180x180":"assets/images/touch-icons/apple-touch-icon-180x180.png","152x152":"assets/images/touch-icons/apple-touch-icon-152x152.png","144x144":"assets/images/touch-icons/apple-touch-icon-144x144.png","120x120":"assets/images/touch-icons/apple-touch-icon-120x120.png","114x114":"assets/images/touch-icons/apple-touch-icon-114x114.png","76x76":"assets/images/touch-icons/apple-touch-icon-76x76.png","72x72":"assets/images/touch-icons/apple-touch-icon-72x72.png","57x57":"assets/images/touch-icons/apple-touch-icon-57x57.png"}},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"icelam","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Data Structures and Algorithms","links":{"sidebar":{"View on Github":"https://github.com/icelam/data-structures-and-algorithms"}},"gitbook":"*","description":""},"file":{"path":"leetcode/206-reverse-linked-list/solution-2.md","mtime":"2020-04-13T17:47:21.009Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-13T17:48:53.567Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

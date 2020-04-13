@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>24. Swap Nodes in Pairs · Data Structures and Algorithms</title>
+        <title>Approach 1: Recursive Approach · Data Structures and Algorithms</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -62,10 +62,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="solution-1.html" />
+    <link rel="next" href="solution-2.html" />
     
     
-    <link rel="prev" href="../../asymptotic-notation/big-o-notation.html" />
+    <link rel="prev" href="./" />
     
 
     
@@ -200,7 +200,7 @@
         
         
     
-        <li class="chapter active" data-level="3.1" data-path="./">
+        <li class="chapter " data-level="3.1" data-path="./">
             
                 <a href="./">
             
@@ -214,7 +214,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.1.1" data-path="solution-1.html">
+        <li class="chapter active" data-level="3.1.1" data-path="solution-1.html">
             
                 <a href="solution-1.html">
             
@@ -514,7 +514,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >24. Swap Nodes in Pairs</a>
+        <a href="../.." >Approach 1: Recursive Approach</a>
     </h1>
 </div>
 
@@ -530,18 +530,141 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="24-swap-nodes-in-pairs">24. Swap Nodes in Pairs</h1>
-<blockquote>
-<p>Level: Meduim<br>Link: <a href="https://leetcode.com/problems/swap-nodes-in-pairs/" target="_blank">https://leetcode.com/problems/swap-nodes-in-pairs/</a></p>
-</blockquote>
-<h2 id="problem">Problem</h2>
-<p>Given a linked list, swap every two adjacent nodes and return its head.</p>
-<p>You may <strong>not</strong> modify the values in the list&apos;s nodes, only nodes itself may be changed.</p>
-<h4 id="example">Example:</h4>
-<pre><code>Given 1-&gt;2-&gt;3-&gt;4, you should return the list as 2-&gt;1-&gt;4-&gt;3.
-</code></pre><h2 id="solution">Solution</h2>
+<p><a href="./">&#x2190;&#xA0;Back to problem</a></p>
+<h2 id="approach-1-recursive-approach">Approach 1: Recursive Approach</h2>
+<h3 id="intuition">Intuition</h3>
+<p>The problem doesn&apos;t ask for entire reversal of linked list. It&apos;s rather asking us to swap every two adjacent nodes of a linked list starting at the very first node.</p>
+<p><img src="images/24_Swap_Nodes_0.png" alt="Step 1"></p>
+<p>The basic intuition is to reach to the end of the linked list in steps of two using recursion.</p>
+<p><img src="images/24_Swap_Nodes_1.png" alt="Step 2"></p>
+<p>and while back tracking the nodes can be swapped.</p>
+<p><img src="images/24_Swap_Nodes_2.png" alt="Step 3"></p>
+<p>In every function call we take out two nodes which would be swapped and the remaining nodes are passed to the next recursive call. The reason we are adopting a recursive approach here is because a sub-list of the original list would still be a linked list and hence, it would adapt to our recursive strategy. Assuming the recursion would return the swapped <code>remaining</code> list of nodes, we just swap the current two nodes and attach the remaining list we get from recursion to these two swapped pairs.</p>
+<p><img src="images/24_Swap_Nodes_3.png" alt="Step 4"></p>
+<h3 id="algorithm">Algorithm</h3>
+<ol>
+<li>Start the recursion with <code>head</code> node of the original linked list.</li>
+<li>Every recursion call is responsible for swapping a pair of nodes. Let&apos;s represent the two nodes to be swapped by <code>firstNode</code> and <code>secondNode</code>.</li>
+<li>Next recursion is made by calling the function with head of the next pair of nodes. This call would swap the next two nodes and make further recursive calls if there are nodes left in the linked list.</li>
+<li>Once we get the pointer to the remaining swapped list from the recursion call, we can swap the <code>firstNode</code> and <code>secondNode</code> i.e. the nodes in the current recursive call and then return the pointer to the <code>secondNode</code> since it will be the new head after swapping.<br><img src="images/24_Swap_Nodes_4.png" alt="Point 4"></li>
+<li>Once all the pairs are swapped in the backtracking step, we would eventually be returning the pointer to the head of the now <code>swapped</code> list. This head will essentially be the second node in the original linked list.</li>
+</ol>
+<h3 id="implementation">Implementation</h3>
+<p><div id="b967a71d384f2316830fc3d6749173e1" class="gbcg gbcg-codegroup" data-remember-tabs="false">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-1ecbb7817160fccc779e13cc12623354" class="gbcg-selector gbcg-active" data-tab="Java-0-1ecbb7817160fccc779e13cc12623354">Java</a>
+    <a id="select-Python-1-661bff1ea9ee0a3cbbd66a9f886aae5d" class="gbcg-selector" data-tab="Python-1-661bff1ea9ee0a3cbbd66a9f886aae5d">Python</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-1ecbb7817160fccc779e13cc12623354" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java"><span class="hljs-comment">/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ListNode <span class="hljs-title">swapPairs</span><span class="hljs-params">(ListNode head)</span> </span>{
+
+        <span class="hljs-comment">// If the list has no node or has only one node left.</span>
+        <span class="hljs-keyword">if</span> ((head == <span class="hljs-keyword">null</span>) || (head.next == <span class="hljs-keyword">null</span>)) {
+            <span class="hljs-keyword">return</span> head;
+        }
+
+        <span class="hljs-comment">// Nodes to be swapped</span>
+        ListNode firstNode = head;
+        ListNode secondNode = head.next;
+
+        <span class="hljs-comment">// Swapping</span>
+        firstNode.next  = swapPairs(secondNode.next);
+        secondNode.next = firstNode;
+
+        <span class="hljs-comment">// Now the head is the second node</span>
+        <span class="hljs-keyword">return</span> secondNode;
+    }
+}
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-1ecbb7817160fccc779e13cc12623354" id="java">Java</h3>
+        <div id="Java-0-1ecbb7817160fccc779e13cc12623354" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java"><span class="hljs-comment">/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ListNode <span class="hljs-title">swapPairs</span><span class="hljs-params">(ListNode head)</span> </span>{
+
+        <span class="hljs-comment">// If the list has no node or has only one node left.</span>
+        <span class="hljs-keyword">if</span> ((head == <span class="hljs-keyword">null</span>) || (head.next == <span class="hljs-keyword">null</span>)) {
+            <span class="hljs-keyword">return</span> head;
+        }
+
+        <span class="hljs-comment">// Nodes to be swapped</span>
+        ListNode firstNode = head;
+        ListNode secondNode = head.next;
+
+        <span class="hljs-comment">// Swapping</span>
+        firstNode.next  = swapPairs(secondNode.next);
+        secondNode.next = firstNode;
+
+        <span class="hljs-comment">// Now the head is the second node</span>
+        <span class="hljs-keyword">return</span> secondNode;
+    }
+}
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Python-1-661bff1ea9ee0a3cbbd66a9f886aae5d" id="python">Python</h3>
+        <div id="Python-1-661bff1ea9ee0a3cbbd66a9f886aae5d" class="gbcg-tab-item gbcb-Python">
+          <pre><code class="lang-Python"><span class="hljs-comment"># Definition for singly-linked list.</span>
+<span class="hljs-comment"># class ListNode(object):</span>
+<span class="hljs-comment">#     def __init__(self, x):</span>
+<span class="hljs-comment">#         self.val = x</span>
+<span class="hljs-comment">#         self.next = None</span>
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">swapPairs</span><span class="hljs-params">(self, head: ListNode)</span> -&gt; ListNode:</span>
+        <span class="hljs-string">&quot;&quot;&quot;
+        :type head: ListNode
+        :rtype: ListNode
+        &quot;&quot;&quot;</span>
+
+        <span class="hljs-comment"># If the list has no node or has only one node left.</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> head <span class="hljs-keyword">or</span> <span class="hljs-keyword">not</span> head.next:
+            <span class="hljs-keyword">return</span> head
+
+        <span class="hljs-comment"># Nodes to be swapped</span>
+        first_node = head
+        second_node = head.next
+
+        <span class="hljs-comment"># Swapping</span>
+        first_node.next  = self.swapPairs(second_node.next)
+        second_node.next = first_node
+
+        <span class="hljs-comment"># Now the head is the second node</span>
+        <span class="hljs-keyword">return</span> second_node
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<h3 id="complexity-analysis">Complexity Analysis</h3>
 <ul>
-<li><a href="solution-1.html">Approach 1: Recursive Approach</a></li>
-<li><a href="solution-2.html">Approach 2: Iterative Approach</a></li>
+<li>Time Complexity: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>, where <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span> is the size of the linked list.</li>
+<li>Space Complexity: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span> stack space utilized for recursion.</li>
 </ul>
 
                                 
@@ -570,12 +693,12 @@
 
             
                 
-                <a href="../../asymptotic-notation/big-o-notation.html" class="navigation navigation-prev " aria-label="Previous page: Big O Notation (TBC)">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 24. Swap Nodes in Pairs">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="solution-1.html" class="navigation navigation-next " aria-label="Next page: Approach 1: Recursive Approach">
+                <a href="solution-2.html" class="navigation navigation-next " aria-label="Next page: Approach 2: Iterative Approach">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -586,7 +709,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"24. Swap Nodes in Pairs","level":"3.1","depth":1,"next":{"title":"Approach 1: Recursive Approach","level":"3.1.1","depth":2,"path":"leetcode/24-swap-nodes-in-pairs/solution-1.md","ref":"leetcode/24-swap-nodes-in-pairs/solution-1.md","articles":[]},"previous":{"title":"Big O Notation (TBC)","level":"2.2","depth":1,"path":"asymptotic-notation/big-o-notation.md","ref":"./asymptotic-notation/big-o-notation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","katex","expandable-chapters-small","codegroup","styles-sass-fix","-sharing"],"styles":{"website":"website-1586800134769.css"},"pluginsConfig":{"styles-sass-fix":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"fontsettings":{"theme":"night","family":"sans","size":1},"highlight":{},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"assets/images/touch-icons/apple-touch-icon-57x57.png","appleTouchMore":{"180x180":"assets/images/touch-icons/apple-touch-icon-180x180.png","152x152":"assets/images/touch-icons/apple-touch-icon-152x152.png","144x144":"assets/images/touch-icons/apple-touch-icon-144x144.png","120x120":"assets/images/touch-icons/apple-touch-icon-120x120.png","114x114":"assets/images/touch-icons/apple-touch-icon-114x114.png","76x76":"assets/images/touch-icons/apple-touch-icon-76x76.png","72x72":"assets/images/touch-icons/apple-touch-icon-72x72.png","57x57":"assets/images/touch-icons/apple-touch-icon-57x57.png"}},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"icelam","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Data Structures and Algorithms","links":{"sidebar":{"View on Github":"https://github.com/icelam/data-structures-and-algorithms"}},"gitbook":"*","description":""},"file":{"path":"leetcode/24-swap-nodes-in-pairs/README.md","mtime":"2020-04-13T17:47:21.009Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-13T17:48:53.567Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Approach 1: Recursive Approach","level":"3.1.1","depth":2,"next":{"title":"Approach 2: Iterative Approach","level":"3.1.2","depth":2,"path":"leetcode/24-swap-nodes-in-pairs/solution-2.md","ref":"leetcode/24-swap-nodes-in-pairs/solution-2.md","articles":[]},"previous":{"title":"24. Swap Nodes in Pairs","level":"3.1","depth":1,"path":"leetcode/24-swap-nodes-in-pairs/README.md","ref":"leetcode/24-swap-nodes-in-pairs/README.md","articles":[{"title":"Approach 1: Recursive Approach","level":"3.1.1","depth":2,"path":"leetcode/24-swap-nodes-in-pairs/solution-1.md","ref":"leetcode/24-swap-nodes-in-pairs/solution-1.md","articles":[]},{"title":"Approach 2: Iterative Approach","level":"3.1.2","depth":2,"path":"leetcode/24-swap-nodes-in-pairs/solution-2.md","ref":"leetcode/24-swap-nodes-in-pairs/solution-2.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["favicon","katex","expandable-chapters-small","codegroup","styles-sass-fix","-sharing"],"styles":{"website":"website-1586800134769.css"},"pluginsConfig":{"styles-sass-fix":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"fontsettings":{"theme":"night","family":"sans","size":1},"highlight":{},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"assets/images/touch-icons/apple-touch-icon-57x57.png","appleTouchMore":{"180x180":"assets/images/touch-icons/apple-touch-icon-180x180.png","152x152":"assets/images/touch-icons/apple-touch-icon-152x152.png","144x144":"assets/images/touch-icons/apple-touch-icon-144x144.png","120x120":"assets/images/touch-icons/apple-touch-icon-120x120.png","114x114":"assets/images/touch-icons/apple-touch-icon-114x114.png","76x76":"assets/images/touch-icons/apple-touch-icon-76x76.png","72x72":"assets/images/touch-icons/apple-touch-icon-72x72.png","57x57":"assets/images/touch-icons/apple-touch-icon-57x57.png"}},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"icelam","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Data Structures and Algorithms","links":{"sidebar":{"View on Github":"https://github.com/icelam/data-structures-and-algorithms"}},"gitbook":"*","description":""},"file":{"path":"leetcode/24-swap-nodes-in-pairs/solution-1.md","mtime":"2020-04-13T17:47:21.013Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-13T17:48:53.567Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
