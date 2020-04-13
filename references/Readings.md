@@ -56,3 +56,9 @@ Data Structures and Algorithms library for JavaScript
 
 ## 初學者練習 - LeetCode with Javascript
 [https://skyyen999.gitbooks.io/-leetcode-with-javascript/content/](https://skyyen999.gitbooks.io/-leetcode-with-javascript/content/)
+
+## [資料結構] 演算法評估與資料型別
+[http://notepad.yehyeh.net/Content/DS/CH01/3.php](http://notepad.yehyeh.net/Content/DS/CH01/3.php)
+
+## Big-O Cheatsheet
+[https://www.bigocheatsheet.com/](https://www.bigocheatsheet.com/)

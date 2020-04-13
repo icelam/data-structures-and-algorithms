@@ -2,6 +2,10 @@
 * [Introduction](README.md)
 * [Table of contents](./SUMMARY.md)
 
+## Asymptotic Notation
+  * [Introduction](./asymptotic-notation/README.md)
+  * [Big O Notation (TBC)](./asymptotic-notation/big-o-notation.md)
+
 ## LeetCode
   * [24. Swap Nodes in Pairs](leetcode/24-swap-nodes-in-pairs/README.md)
     * [Approach 1: Recursive Approach](leetcode/24-swap-nodes-in-pairs/solution-1.md)
