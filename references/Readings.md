@@ -1,7 +1,7 @@
 ## 程式麻瓜的程式知識課
 
 初學者學演算法｜談什麼是演算法和時間複雜度  
-[https://medium.com/appworks-school/初學者學演算法-談什麼是演算法和時間複雜度-b1f6908e4b](https://medium.com/appworks-school/初學者學演算法-談什麼是演算法和時間複雜度-b1f6908e4b)
+[https://medium.com/appworks-school/初學者學演算法-談什麼是演算法和時間複雜度-b1f6908e4b80](https://medium.com/appworks-school/初學者學演算法-談什麼是演算法和時間複雜度-b1f6908e4b80)
 
 初學者學演算法｜從時間複雜度認識常見演算法  
 [https://medium.com/appworks-school/初學者學演算法-從時間複雜度認識常見演算法-一-b46fece65ba5](https://medium.com/appworks-school/初學者學演算法-從時間複雜度認識常見演算法-一-b46fece65ba5)
