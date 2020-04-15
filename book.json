@@ -4,7 +4,7 @@
   "description": "",
   "links": {
     "sidebar": {
-      "View on Github": "https://github.com/icelam/data-structures-and-algorithms"
+      "Data Structures and Algorithms": "https://github.com/icelam/data-structures-and-algorithms"
     }
   },
   "plugins": [
@@ -13,6 +13,7 @@
     "expandable-chapters-small",
     "codegroup",
     "styles-sass-fix",
+    "github",
     "-sharing"
   ],
   "styles": {
@@ -38,6 +39,9 @@
       "theme": "night",
       "family": "sans",
       "size": 1
+    },
+    "github": {
+      "url": "https://github.com/icelam/data-structures-and-algorithms"
     }
   }
 }
