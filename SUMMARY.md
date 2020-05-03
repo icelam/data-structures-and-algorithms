@@ -9,6 +9,9 @@
 ## Data Structures
   * [Array and Linked List](./data-structures/array-and-linked-list/README.md)
 
+## Searching Algorithms
+  * [Binary Search](./algorithms/searching/binary-search/README.md)
+
 ## LeetCode
   * [24. Swap Nodes in Pairs](leetcode/24-swap-nodes-in-pairs/README.md)
     * [Approach 1: Recursive Approach](leetcode/24-swap-nodes-in-pairs/solution-1.md)
