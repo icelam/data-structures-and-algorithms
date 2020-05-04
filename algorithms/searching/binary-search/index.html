@@ -1,0 +1,719 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Binary Search · Data Structures and Algorithms</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="icelam">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-codegroup/code.group.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../website-1588559024792.css">
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../../leetcode/24-swap-nodes-in-pairs/" />
+    
+    
+    <link rel="prev" href="../../../data-structures/array-and-linked-list/" />
+    
+
+    
+        <link rel="shortcut icon" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../../assets/images/touch-icons/apple-touch-icon-57x57.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/images/touch-icons/apple-touch-icon-180x180.png">
+        
+        <link rel="apple-touch-icon" sizes="152x152" href="../../../assets/images/touch-icons/apple-touch-icon-152x152.png">
+        
+        <link rel="apple-touch-icon" sizes="144x144" href="../../../assets/images/touch-icons/apple-touch-icon-144x144.png">
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../../assets/images/touch-icons/apple-touch-icon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="114x114" href="../../../assets/images/touch-icons/apple-touch-icon-114x114.png">
+        
+        <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/images/touch-icons/apple-touch-icon-76x76.png">
+        
+        <link rel="apple-touch-icon" sizes="72x72" href="../../../assets/images/touch-icons/apple-touch-icon-72x72.png">
+        
+        <link rel="apple-touch-icon" sizes="57x57" href="../../../assets/images/touch-icons/apple-touch-icon-57x57.png">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/icelam/data-structures-and-algorithms" target="_blank" class="custom-link">Data Structures and Algorithms</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">Summary</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../SUMMARY.html">
+            
+                <a href="../../../SUMMARY.html">
+            
+                    
+                    Table of contents
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Asymptotic Notation</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../../asymptotic-notation/">
+            
+                <a href="../../../asymptotic-notation/">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../../asymptotic-notation/big-o-notation.html">
+            
+                <a href="../../../asymptotic-notation/big-o-notation.html">
+            
+                    
+                    Big O Notation (TBC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Data Structures</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../../data-structures/array-and-linked-list/">
+            
+                <a href="../../../data-structures/array-and-linked-list/">
+            
+                    
+                    Array and Linked List
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Searching Algorithms</li>
+        
+        
+    
+        <li class="chapter active" data-level="4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Binary Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">LeetCode</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../../leetcode/24-swap-nodes-in-pairs/">
+            
+                <a href="../../../leetcode/24-swap-nodes-in-pairs/">
+            
+                    
+                    24. Swap Nodes in Pairs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../../leetcode/24-swap-nodes-in-pairs/solution-1.html">
+            
+                <a href="../../../leetcode/24-swap-nodes-in-pairs/solution-1.html">
+            
+                    
+                    Approach 1: Recursive Approach
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../../leetcode/24-swap-nodes-in-pairs/solution-2.html">
+            
+                <a href="../../../leetcode/24-swap-nodes-in-pairs/solution-2.html">
+            
+                    
+                    Approach 2: Iterative Approach
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../../leetcode/136-single-number/">
+            
+                <a href="../../../leetcode/136-single-number/">
+            
+                    
+                    136. Single Number
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="../../../leetcode/136-single-number/solution-1.html">
+            
+                <a href="../../../leetcode/136-single-number/solution-1.html">
+            
+                    
+                    Approach 1: List operation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="../../../leetcode/136-single-number/solution-2.html">
+            
+                <a href="../../../leetcode/136-single-number/solution-2.html">
+            
+                    
+                    Approach 2: Hash Table
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3" data-path="../../../leetcode/136-single-number/solution-3.html">
+            
+                <a href="../../../leetcode/136-single-number/solution-3.html">
+            
+                    
+                    Approach 3: Math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.4" data-path="../../../leetcode/136-single-number/solution-4.html">
+            
+                <a href="../../../leetcode/136-single-number/solution-4.html">
+            
+                    
+                    Approach 4: Bit Manipulation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../../../leetcode/202-happy-number/">
+            
+                <a href="../../../leetcode/202-happy-number/">
+            
+                    
+                    202. Happy Number
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.3.1" data-path="../../../leetcode/202-happy-number/solution-1.html">
+            
+                <a href="../../../leetcode/202-happy-number/solution-1.html">
+            
+                    
+                    Approach 1: Detect Cycles with a HashSet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.2" data-path="../../../leetcode/202-happy-number/solution-2.html">
+            
+                <a href="../../../leetcode/202-happy-number/solution-2.html">
+            
+                    
+                    Approach 2: Floyd's Cycle-Finding Algorithm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.3" data-path="../../../leetcode/202-happy-number/solution-3.html">
+            
+                <a href="../../../leetcode/202-happy-number/solution-3.html">
+            
+                    
+                    Approach 3: Hardcoding the Only Cycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../../../leetcode/206-reverse-linked-list/">
+            
+                <a href="../../../leetcode/206-reverse-linked-list/">
+            
+                    
+                    206. Reverse Linked List
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.4.1" data-path="../../../leetcode/206-reverse-linked-list/solution-1.html">
+            
+                <a href="../../../leetcode/206-reverse-linked-list/solution-1.html">
+            
+                    
+                    Approach 1: Iterative
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4.2" data-path="../../../leetcode/206-reverse-linked-list/solution-2.html">
+            
+                <a href="../../../leetcode/206-reverse-linked-list/solution-2.html">
+            
+                    
+                    Approach 2: Recursive
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../../../leetcode/344-reverse-string/">
+            
+                <a href="../../../leetcode/344-reverse-string/">
+            
+                    
+                    344. Reverse String
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.5.1" data-path="../../../leetcode/344-reverse-string/solution-1.html">
+            
+                <a href="../../../leetcode/344-reverse-string/solution-1.html">
+            
+                    
+                    Approach 1: Recursion, In-Place
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5.2" data-path="../../../leetcode/344-reverse-string/solution-2.html">
+            
+                <a href="../../../leetcode/344-reverse-string/solution-2.html">
+            
+                    
+                    Approach 2: Two Pointers, Iteration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">References</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../../references/readings.md">
+            
+                <span>
+            
+                    
+                    Supplementary Readings
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Binary Search</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="binary-search">Binary Search</h1>
+<p>Binary search is a searching algorithm which requires the input to be a <strong>sorted array</strong>.</p>
+<p><strong>Step to perform binary search:</strong></p>
+<ol>
+<li>Inspect the middle element (<code>mid</code>) of the sorted array</li>
+<li>Check if <code>mid &gt;= item</code>, where <code>item</code> is the element we are looking for<ul>
+<li>If <code>true</code>, left half of the array will be the new set to search</li>
+<li>If <code>false</code>, right half of the array will be the new set to search</li>
+</ul>
+</li>
+<li>Repeat this process until either the element we are looking for is located or the array cannot be further divided</li>
+</ol>
+<h2 id="example">Example</h2>
+<p>Given an array <code>[-1, 1, 2, 5, 8, 10, 21, 60, 80]</code> and an item <code>10</code>, find the index of the item. If it is not found, return <code>-1</code>.</p>
+<ol>
+<li>Inspect the middle element<ul>
+<li>Middle element:  index = 4(<code>(0 + 8) / 2</code>), which contains value <code>8</code></li>
+<li><code>8 &gt;= 10</code> returns <code>false</code>, continue the search on right half of the array (<code>[10, 21, 60, 80]</code>)</li>
+<li><img src="images/binary-search-step-1.png" alt="Step 1"></li>
+</ul>
+</li>
+<li>Inspect the middle element of in the right half of the array <ul>
+<li>New middle element: index = 6 (<code>(5 + 8) / 2</code>), which contains value <code>21</code></li>
+<li><code>21 &gt;= 10</code> returns <code>true</code> , continue the search on left half of the new set (<code>[10]</code>)</li>
+<li><img src="images/binary-search-step-2.png" alt="Step 2"></li>
+</ul>
+</li>
+<li>Inspect the middle element, which is also the last element to search<ul>
+<li>New middle element: index = 5 (<code>(5 + 5) / 2</code>), which contains value <code>10</code></li>
+<li><code>10 == 10</code> returns <code>true</code></li>
+<li>return the index of element <code>5</code></li>
+<li><img src="images/binary-search-step-3.png" alt="Step 3"></li>
+</ul>
+</li>
+</ol>
+<h2 id="code-sample">Code Sample</h2>
+<pre><code class="lang-Python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">binary_search</span><span class="hljs-params">(list, item)</span>:</span> 
+  low = <span class="hljs-number">0</span>
+  high = len(list)<span class="hljs-number">-1</span>
+
+  <span class="hljs-keyword">while</span> low &lt;= high: 
+    mid = (low + high) // <span class="hljs-number">2</span>  <span class="hljs-comment"># &apos;//&apos; for floor division </span>
+    guess = list[mid] 
+
+    <span class="hljs-keyword">if</span> guess == item:
+      <span class="hljs-keyword">return</span> mid
+    <span class="hljs-keyword">if</span> guess &gt; item: 
+      high = mid - <span class="hljs-number">1</span>
+    <span class="hljs-keyword">else</span>:
+      low = mid + <span class="hljs-number">1</span>
+
+  <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>
+
+my_list = [<span class="hljs-number">-1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>, <span class="hljs-number">10</span>, <span class="hljs-number">21</span>, <span class="hljs-number">60</span>, <span class="hljs-number">80</span>]
+binary_search(my_list, <span class="hljs-number">10</span>) <span class="hljs-comment"># result: 5</span>
+</code></pre>
+<h2 id="complexity-analysis">Complexity Analysis</h2>
+<ul>
+<li>Time complexity : <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi>O</mi></mrow><mo>(</mo><msub><mi>log</mi><mn>2</mn></msub><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">{O}(\log_2n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mop"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="msupsub"><span class="vlist"><span style="top:0.24444em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../../../data-structures/array-and-linked-list/" class="navigation navigation-prev " aria-label="Previous page: Array and Linked List">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../../leetcode/24-swap-nodes-in-pairs/" class="navigation navigation-next " aria-label="Next page: 24. Swap Nodes in Pairs">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Binary Search","level":"4.1","depth":1,"next":{"title":"24. Swap Nodes in Pairs","level":"5.1","depth":1,"path":"leetcode/24-swap-nodes-in-pairs/README.md","ref":"leetcode/24-swap-nodes-in-pairs/README.md","articles":[{"title":"Approach 1: Recursive Approach","level":"5.1.1","depth":2,"path":"leetcode/24-swap-nodes-in-pairs/solution-1.md","ref":"leetcode/24-swap-nodes-in-pairs/solution-1.md","articles":[]},{"title":"Approach 2: Iterative Approach","level":"5.1.2","depth":2,"path":"leetcode/24-swap-nodes-in-pairs/solution-2.md","ref":"leetcode/24-swap-nodes-in-pairs/solution-2.md","articles":[]}]},"previous":{"title":"Array and Linked List","level":"3.1","depth":1,"path":"data-structures/array-and-linked-list/README.md","ref":"./data-structures/array-and-linked-list/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","katex","expandable-chapters-small","codegroup","styles-sass-fix","github","-sharing"],"styles":{"website":"website-1588559024792.css"},"pluginsConfig":{"styles-sass-fix":{},"github":{"url":"https://github.com/icelam/data-structures-and-algorithms"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"fontsettings":{"theme":"night","family":"sans","size":1},"highlight":{},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"assets/images/touch-icons/apple-touch-icon-57x57.png","appleTouchMore":{"180x180":"assets/images/touch-icons/apple-touch-icon-180x180.png","152x152":"assets/images/touch-icons/apple-touch-icon-152x152.png","144x144":"assets/images/touch-icons/apple-touch-icon-144x144.png","120x120":"assets/images/touch-icons/apple-touch-icon-120x120.png","114x114":"assets/images/touch-icons/apple-touch-icon-114x114.png","76x76":"assets/images/touch-icons/apple-touch-icon-76x76.png","72x72":"assets/images/touch-icons/apple-touch-icon-72x72.png","57x57":"assets/images/touch-icons/apple-touch-icon-57x57.png"}},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"icelam","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Data Structures and Algorithms","links":{"sidebar":{"Data Structures and Algorithms":"https://github.com/icelam/data-structures-and-algorithms"}},"gitbook":"*","description":""},"file":{"path":"algorithms/searching/binary-search/README.md","mtime":"2020-05-04T02:21:56.808Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-04T02:23:43.632Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-codegroup/code.group.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
