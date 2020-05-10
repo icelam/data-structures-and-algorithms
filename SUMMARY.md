@@ -12,6 +12,9 @@
 ## Searching Algorithms
   * [Binary Search](./algorithms/searching/binary-search/README.md)
 
+## Sorting Algorithms
+  * [Selector Sort](./algorithms/sorting/selection-sort/README.md)
+
 ## LeetCode
   * [24. Swap Nodes in Pairs](leetcode/24-swap-nodes-in-pairs/README.md)
     * [Approach 1: Recursive Approach](leetcode/24-swap-nodes-in-pairs/solution-1.md)
