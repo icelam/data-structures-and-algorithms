@@ -73,6 +73,14 @@ int main() {
 ```
 {% endcodegroup %}
 
+## Pros and Cons
+
+* Pros : Easy to implement
+* Cons : Is not faster on a partially sorted array
+
 ## Complexity Analysis
 
-* Time complexity : $${O}(n^2)$$
+* Time complexity : $$2 * (n-1) + (1 + 2 + 3 + ... + n-1)$$  
+$$=2(n-1) + (1+n-1)(n-1)/2$$  
+$$=2(n-1) + n(n-1)/2$$  
+$$={O}(n^2)$$
