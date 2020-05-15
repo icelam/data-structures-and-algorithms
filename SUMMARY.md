@@ -10,6 +10,7 @@
   * [Array and Linked List](./data-structures/array-and-linked-list/README.md)
 
 ## Searching Algorithms
+  * [Sequential Search](./algorithms/searching/sequential-search/README.md)
   * [Binary Search](./algorithms/searching/binary-search/README.md)
 
 ## Sorting Algorithms
