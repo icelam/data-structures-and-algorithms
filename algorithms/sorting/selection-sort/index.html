@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Binary Search · Data Structures and Algorithms</title>
+        <title>Selector Sort · Data Structures and Algorithms</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -62,10 +62,10 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../../sorting/selection-sort/" />
+    <link rel="next" href="../../../leetcode/24-swap-nodes-in-pairs/" />
     
     
-    <link rel="prev" href="../sequential-search/" />
+    <link rel="prev" href="../../searching/binary-search/" />
     
 
     
@@ -220,9 +220,9 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../sequential-search/">
+        <li class="chapter " data-level="4.1" data-path="../../searching/sequential-search/">
             
-                <a href="../sequential-search/">
+                <a href="../../searching/sequential-search/">
             
                     
                     Sequential Search
@@ -233,9 +233,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="4.2" data-path="./">
+        <li class="chapter " data-level="4.2" data-path="../../searching/binary-search/">
             
-                <a href="./">
+                <a href="../../searching/binary-search/">
             
                     
                     Binary Search
@@ -253,9 +253,9 @@
         
         
     
-        <li class="chapter " data-level="5.1" data-path="../../sorting/selection-sort/">
+        <li class="chapter active" data-level="5.1" data-path="./">
             
-                <a href="../../sorting/selection-sort/">
+                <a href="./">
             
                     
                     Selector Sort
@@ -587,7 +587,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >Binary Search</a>
+        <a href="../../.." >Selector Sort</a>
     </h1>
 </div>
 
@@ -602,65 +602,121 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="binary-search">Binary Search</h1>
-<p>Binary search is a searching algorithm which requires the input to be a <strong>sorted array</strong>.</p>
-<p><strong>Step to perform binary search:</strong></p>
+                                <h1 id="selection-sort">Selection Sort</h1>
+<p><strong>Step to perform selection sort:</strong></p>
 <ol>
-<li>Inspect the middle element (<code>mid</code>) of the sorted array</li>
-<li>Check if <code>mid &gt;= item</code>, where <code>item</code> is the element we are looking for<ul>
-<li>If <code>true</code>, left half of the array will be the new set to search</li>
-<li>If <code>false</code>, right half of the array will be the new set to search</li>
-</ul>
-</li>
-<li>Repeat this process until either the element we are looking for is located or the array cannot be further divided</li>
+<li>Select the largest element in the array</li>
+<li>Move that element to the last position</li>
+<li>Repeat but ignoring the last element</li>
 </ol>
 <h2 id="example">Example</h2>
-<p>Given an array <code>[-1, 1, 2, 5, 8, 10, 21, 60, 80]</code> and an item <code>10</code>, find the index of the item. If it is not found, return <code>-1</code>.</p>
-<ol>
-<li>Inspect the middle element<ul>
-<li>Middle element:  index = 4(<code>(0 + 8) / 2</code>), which contains value <code>8</code></li>
-<li><code>8 &gt;= 10</code> returns <code>false</code>, continue the search on right half of the array (<code>[10, 21, 60, 80]</code>)</li>
-<li><img src="images/binary-search-step-1.png" alt="Step 1"></li>
-</ul>
-</li>
-<li>Inspect the middle element of in the right half of the array <ul>
-<li>New middle element: index = 6 (<code>(5 + 8) / 2</code>), which contains value <code>21</code></li>
-<li><code>21 &gt;= 10</code> returns <code>true</code> , continue the search on left half of the new set (<code>[10]</code>)</li>
-<li><img src="images/binary-search-step-2.png" alt="Step 2"></li>
-</ul>
-</li>
-<li>Inspect the middle element, which is also the last element to search<ul>
-<li>New middle element: index = 5 (<code>(5 + 5) / 2</code>), which contains value <code>10</code></li>
-<li><code>10 == 10</code> returns <code>true</code></li>
-<li>return the index of element <code>5</code></li>
-<li><img src="images/binary-search-step-3.png" alt="Step 3"></li>
-</ul>
-</li>
-</ol>
+<p>Given an array <code>[17, 2, 32, 52, 11, 7]</code>, sort it using selection sort.</p>
+<p>Example:<br><img src="images/explaination.png" alt="Example"></p>
 <h2 id="code-sample">Code Sample</h2>
-<pre><code class="lang-Python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">binary_search</span><span class="hljs-params">(list, item)</span>:</span> 
-  low = <span class="hljs-number">0</span>
-  high = len(list)<span class="hljs-number">-1</span>
+<p><div id="14c3ce4a863f22e431a918c838e1426e" class="gbcg gbcg-codegroup" data-remember-tabs="false">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Python-0-4f8c4874f4e9a65bff636af60587ce43" class="gbcg-selector gbcg-active" data-tab="Python-0-4f8c4874f4e9a65bff636af60587ce43">Python</a>
+    <a id="select-cpp-1-a7146c62c198f2e64fa75e292166c511" class="gbcg-selector" data-tab="cpp-1-a7146c62c198f2e64fa75e292166c511">C++</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Python-0-4f8c4874f4e9a65bff636af60587ce43" class="gbcg-tab-item gbcb-Python">
+        <pre><code class="lang-Python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">findSmallest</span><span class="hljs-params">(arr)</span>:</span> 
+  smallest = arr[<span class="hljs-number">0</span>] 
+  smallest_index = <span class="hljs-number">0</span>
+  <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, len(arr)):
+    <span class="hljs-keyword">if</span> arr[i] &lt; smallest: 
+      smallest = arr[i] 
+      smallest_index = i
+  <span class="hljs-keyword">return</span> smallest_index
 
-  <span class="hljs-keyword">while</span> low &lt;= high: 
-    mid = (low + high) // <span class="hljs-number">2</span>  <span class="hljs-comment"># &apos;//&apos; for floor division </span>
-    guess = list[mid] 
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">selectionSort</span><span class="hljs-params">(arr)</span>:</span> 
+  newArr = []
+  <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(arr)):
+    smallest = findSmallest(arr)
+    newArr.append(arr.pop(smallest)) 
+  <span class="hljs-keyword">return</span> newArr
 
-    <span class="hljs-keyword">if</span> guess == item:
-      <span class="hljs-keyword">return</span> mid
-    <span class="hljs-keyword">if</span> guess &gt; item: 
-      high = mid - <span class="hljs-number">1</span>
-    <span class="hljs-keyword">else</span>:
-      low = mid + <span class="hljs-number">1</span>
-
-  <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>
-
-my_list = [<span class="hljs-number">-1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>, <span class="hljs-number">10</span>, <span class="hljs-number">21</span>, <span class="hljs-number">60</span>, <span class="hljs-number">80</span>]
-binary_search(my_list, <span class="hljs-number">10</span>) <span class="hljs-comment"># result: 5</span>
+result = selectionSort([<span class="hljs-number">17</span>, <span class="hljs-number">2</span>, <span class="hljs-number">32</span>, <span class="hljs-number">52</span>, <span class="hljs-number">11</span>, <span class="hljs-number">7</span>])
+print(result)
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Python-0-4f8c4874f4e9a65bff636af60587ce43" id="python">Python</h3>
+        <div id="Python-0-4f8c4874f4e9a65bff636af60587ce43" class="gbcg-tab-item gbcb-Python">
+          <pre><code class="lang-Python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">findSmallest</span><span class="hljs-params">(arr)</span>:</span> 
+  smallest = arr[<span class="hljs-number">0</span>] 
+  smallest_index = <span class="hljs-number">0</span>
+  <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, len(arr)):
+    <span class="hljs-keyword">if</span> arr[i] &lt; smallest: 
+      smallest = arr[i] 
+      smallest_index = i
+  <span class="hljs-keyword">return</span> smallest_index
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">selectionSort</span><span class="hljs-params">(arr)</span>:</span> 
+  newArr = []
+  <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(arr)):
+    smallest = findSmallest(arr)
+    newArr.append(arr.pop(smallest)) 
+  <span class="hljs-keyword">return</span> newArr
+
+result = selectionSort([<span class="hljs-number">17</span>, <span class="hljs-number">2</span>, <span class="hljs-number">32</span>, <span class="hljs-number">52</span>, <span class="hljs-number">11</span>, <span class="hljs-number">7</span>])
+print(result)
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname cpp-1-a7146c62c198f2e64fa75e292166c511" id="c">C++</h3>
+        <div id="cpp-1-a7146c62c198f2e64fa75e292166c511" class="gbcg-tab-item gbcb-C++">
+          <pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">selectionSort</span><span class="hljs-params">(<span class="hljs-keyword">int</span> A[], <span class="hljs-keyword">int</span> len)</span> </span>{
+  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; len; i++) {
+    <span class="hljs-keyword">int</span> maxPos = <span class="hljs-number">0</span>;
+      <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>; j &lt; len - i; j++) {
+        <span class="hljs-keyword">if</span>(A[j] &gt; A[maxPos])
+          maxPos = j;
+    }
+
+    <span class="hljs-keyword">int</span> temp = A[maxPos];
+    A[maxPos] = A[len - <span class="hljs-number">1</span> - i];
+    A[len - <span class="hljs-number">1</span> - i] = temp;
+  }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printArray</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> size)</span> </span>{  
+  <span class="hljs-keyword">int</span> i;  
+  <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; size; i++) {
+    <span class="hljs-built_in">cout</span> &lt;&lt; arr[i] &lt;&lt; <span class="hljs-string">&quot; &quot;</span>;  
+  }
+  <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-built_in">endl</span>;  
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">int</span> arr[] = {<span class="hljs-number">17</span>, <span class="hljs-number">2</span>, <span class="hljs-number">32</span>, <span class="hljs-number">52</span>, <span class="hljs-number">11</span>, <span class="hljs-number">7</span>};
+  <span class="hljs-keyword">int</span> n = <span class="hljs-keyword">sizeof</span>(arr)/<span class="hljs-keyword">sizeof</span>(arr[<span class="hljs-number">0</span>]);
+  selectionSort(arr, n);
+
+  <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;Sorted array: \n&quot;</span>;  
+  printArray(arr, n); 
+}
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<h2 id="pros-and-cons">Pros and Cons</h2>
+<ul>
+<li>Pros : Easy to implement</li>
+<li>Cons : Is not faster on a partially sorted array</li>
+</ul>
 <h2 id="complexity-analysis">Complexity Analysis</h2>
 <ul>
-<li>Time complexity : <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi>O</mi></mrow><mo>(</mo><msub><mi>log</mi><mn>2</mn></msub><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">{O}(\log_2n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mop"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="msupsub"><span class="vlist"><span style="top:0.24444em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></li>
+<li>Time complexity : <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mo>&#x2217;</mo><mo>(</mo><mi>n</mi><mo>&#x2212;</mo><mn>1</mn><mo>)</mo><mo>+</mo><mo>(</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>+</mo><mi>n</mi><mo>&#x2212;</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">2 * (n-1) + (1 + 2 + 3 + ... + n-1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">2</span><span class="mbin">&#x2217;</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mbin">&#x2212;</span><span class="mord mathrm">1</span><span class="mclose">)</span><span class="mbin">+</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mbin">+</span><span class="mord mathrm">2</span><span class="mbin">+</span><span class="mord mathrm">3</span><span class="mbin">+</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mbin">+</span><span class="mord mathit">n</span><span class="mbin">&#x2212;</span><span class="mord mathrm">1</span><span class="mclose">)</span></span></span></span><br><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>=</mo><mn>2</mn><mo>(</mo><mi>n</mi><mo>&#x2212;</mo><mn>1</mn><mo>)</mo><mo>+</mo><mo>(</mo><mn>1</mn><mo>+</mo><mi>n</mi><mo>&#x2212;</mo><mn>1</mn><mo>)</mo><mo>(</mo><mi>n</mi><mo>&#x2212;</mo><mn>1</mn><mo>)</mo><mi mathvariant="normal">/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">=2(n-1) + (1+n-1)(n-1)/2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mrel">=</span><span class="mord mathrm">2</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mbin">&#x2212;</span><span class="mord mathrm">1</span><span class="mclose">)</span><span class="mbin">+</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mbin">+</span><span class="mord mathit">n</span><span class="mbin">&#x2212;</span><span class="mord mathrm">1</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mbin">&#x2212;</span><span class="mord mathrm">1</span><span class="mclose">)</span><span class="mord mathrm">/</span><span class="mord mathrm">2</span></span></span></span><br><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>=</mo><mn>2</mn><mo>(</mo><mi>n</mi><mo>&#x2212;</mo><mn>1</mn><mo>)</mo><mo>+</mo><mi>n</mi><mo>(</mo><mi>n</mi><mo>&#x2212;</mo><mn>1</mn><mo>)</mo><mi mathvariant="normal">/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">=2(n-1) + n(n-1)/2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mrel">=</span><span class="mord mathrm">2</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mbin">&#x2212;</span><span class="mord mathrm">1</span><span class="mclose">)</span><span class="mbin">+</span><span class="mord mathit">n</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mbin">&#x2212;</span><span class="mord mathrm">1</span><span class="mclose">)</span><span class="mord mathrm">/</span><span class="mord mathrm">2</span></span></span></span><br><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>=</mo><mrow><mi>O</mi></mrow><mo>(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">={O}(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mrel">=</span><span class="mord textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span></span></li>
 </ul>
 
                                 
@@ -689,12 +745,12 @@ binary_search(my_list, <span class="hljs-number">10</span>) <span class="hljs-co
 
             
                 
-                <a href="../sequential-search/" class="navigation navigation-prev " aria-label="Previous page: Sequential Search">
+                <a href="../../searching/binary-search/" class="navigation navigation-prev " aria-label="Previous page: Binary Search">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../../sorting/selection-sort/" class="navigation navigation-next " aria-label="Next page: Selector Sort">
+                <a href="../../../leetcode/24-swap-nodes-in-pairs/" class="navigation navigation-next " aria-label="Next page: 24. Swap Nodes in Pairs">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -705,7 +761,7 @@ binary_search(my_list, <span class="hljs-number">10</span>) <span class="hljs-co
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Binary Search","level":"4.2","depth":1,"next":{"title":"Selector Sort","level":"5.1","depth":1,"path":"algorithms/sorting/selection-sort/README.md","ref":"./algorithms/sorting/selection-sort/README.md","articles":[]},"previous":{"title":"Sequential Search","level":"4.1","depth":1,"path":"algorithms/searching/sequential-search/README.md","ref":"./algorithms/searching/sequential-search/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","katex","expandable-chapters-small","codegroup","styles-sass-fix","github","-sharing"],"styles":{"website":"website-1589568911425.css"},"pluginsConfig":{"styles-sass-fix":{},"github":{"url":"https://github.com/icelam/data-structures-and-algorithms"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"fontsettings":{"theme":"night","family":"sans","size":1},"highlight":{},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"assets/images/touch-icons/apple-touch-icon-57x57.png","appleTouchMore":{"180x180":"assets/images/touch-icons/apple-touch-icon-180x180.png","152x152":"assets/images/touch-icons/apple-touch-icon-152x152.png","144x144":"assets/images/touch-icons/apple-touch-icon-144x144.png","120x120":"assets/images/touch-icons/apple-touch-icon-120x120.png","114x114":"assets/images/touch-icons/apple-touch-icon-114x114.png","76x76":"assets/images/touch-icons/apple-touch-icon-76x76.png","72x72":"assets/images/touch-icons/apple-touch-icon-72x72.png","57x57":"assets/images/touch-icons/apple-touch-icon-57x57.png"}},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"icelam","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Data Structures and Algorithms","links":{"sidebar":{"Data Structures and Algorithms":"https://github.com/icelam/data-structures-and-algorithms"}},"gitbook":"*","description":""},"file":{"path":"algorithms/searching/binary-search/README.md","mtime":"2020-05-15T18:53:29.473Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-15T18:55:10.163Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Selector Sort","level":"5.1","depth":1,"next":{"title":"24. Swap Nodes in Pairs","level":"6.1","depth":1,"path":"leetcode/24-swap-nodes-in-pairs/README.md","ref":"leetcode/24-swap-nodes-in-pairs/README.md","articles":[{"title":"Approach 1: Recursive Approach","level":"6.1.1","depth":2,"path":"leetcode/24-swap-nodes-in-pairs/solution-1.md","ref":"leetcode/24-swap-nodes-in-pairs/solution-1.md","articles":[]},{"title":"Approach 2: Iterative Approach","level":"6.1.2","depth":2,"path":"leetcode/24-swap-nodes-in-pairs/solution-2.md","ref":"leetcode/24-swap-nodes-in-pairs/solution-2.md","articles":[]}]},"previous":{"title":"Binary Search","level":"4.2","depth":1,"path":"algorithms/searching/binary-search/README.md","ref":"./algorithms/searching/binary-search/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","katex","expandable-chapters-small","codegroup","styles-sass-fix","github","-sharing"],"styles":{"website":"website-1589568911425.css"},"pluginsConfig":{"styles-sass-fix":{},"github":{"url":"https://github.com/icelam/data-structures-and-algorithms"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"fontsettings":{"theme":"night","family":"sans","size":1},"highlight":{},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"assets/images/touch-icons/apple-touch-icon-57x57.png","appleTouchMore":{"180x180":"assets/images/touch-icons/apple-touch-icon-180x180.png","152x152":"assets/images/touch-icons/apple-touch-icon-152x152.png","144x144":"assets/images/touch-icons/apple-touch-icon-144x144.png","120x120":"assets/images/touch-icons/apple-touch-icon-120x120.png","114x114":"assets/images/touch-icons/apple-touch-icon-114x114.png","76x76":"assets/images/touch-icons/apple-touch-icon-76x76.png","72x72":"assets/images/touch-icons/apple-touch-icon-72x72.png","57x57":"assets/images/touch-icons/apple-touch-icon-57x57.png"}},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"icelam","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Data Structures and Algorithms","links":{"sidebar":{"Data Structures and Algorithms":"https://github.com/icelam/data-structures-and-algorithms"}},"gitbook":"*","description":""},"file":{"path":"algorithms/sorting/selection-sort/README.md","mtime":"2020-05-15T18:53:29.473Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-15T18:55:10.163Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
