@@ -46,7 +46,7 @@
 
     
         
-        <link rel="stylesheet" href="../../../website-1589645033919.css">
+        <link rel="stylesheet" href="../../../website-1589646468143.css">
         
     
 
@@ -614,8 +614,40 @@
 <li>The index of the element at the stopping position is the result</li>
 </ol>
 <h2 id="code-sample">Code Sample</h2>
-<p>C++:</p>
-<pre><code class="lang-C++"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">sequentialSearch</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> first, <span class="hljs-keyword">int</span> last, <span class="hljs-keyword">int</span> key)</span> </span>{
+<p><div id="476fdaea3f5d9ed9c8e1ea22e4cf224c" class="gbcg gbcg-codegroup" data-remember-tabs="false">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Python-0-e3813981be0aa105577d2baa868f72ec" class="gbcg-selector gbcg-active" data-tab="Python-0-e3813981be0aa105577d2baa868f72ec">Python</a>
+    <a id="select-cpp-1-5f028498ee88fa61024564b7e6b22ee4" class="gbcg-selector" data-tab="cpp-1-5f028498ee88fa61024564b7e6b22ee4">C++</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Python-0-e3813981be0aa105577d2baa868f72ec" class="gbcg-tab-item gbcb-Python">
+        <pre><code class="lang-Python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sequentialSearch</span><span class="hljs-params">(arr, item)</span>:</span>
+  <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(arr)):
+    <span class="hljs-keyword">if</span> arr[i] == item:
+      <span class="hljs-keyword">return</span> i
+
+  <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Python-0-e3813981be0aa105577d2baa868f72ec" id="python">Python</h3>
+        <div id="Python-0-e3813981be0aa105577d2baa868f72ec" class="gbcg-tab-item gbcb-Python">
+          <pre><code class="lang-Python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sequentialSearch</span><span class="hljs-params">(arr, item)</span>:</span>
+  <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(arr)):
+    <span class="hljs-keyword">if</span> arr[i] == item:
+      <span class="hljs-keyword">return</span> i
+
+  <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname cpp-1-5f028498ee88fa61024564b7e6b22ee4" id="c">C++</h3>
+        <div id="cpp-1-5f028498ee88fa61024564b7e6b22ee4" class="gbcg-tab-item gbcb-C++">
+          <pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">sequentialSearch</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> first, <span class="hljs-keyword">int</span> last, <span class="hljs-keyword">int</span> key)</span> </span>{
   <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> index = first; index &lt;= last; index++) {
     <span class="hljs-keyword">if</span>(key == arr[index]) {
       <span class="hljs-keyword">return</span> index; <span class="hljs-comment">// found! return index</span>
@@ -624,6 +656,11 @@
   <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>; <span class="hljs-comment">// key is not found</span>
 }
 </code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h2 id="complexity-analysis">Complexity Analysis</h2>
 <ul>
 <li>Time complexity : <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi>O</mi></mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">{O}(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></li>
@@ -671,7 +708,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Sequential Search","level":"4.1","depth":1,"next":{"title":"Binary Search","level":"4.2","depth":1,"path":"algorithms/searching/binary-search/README.md","ref":"./algorithms/searching/binary-search/README.md","articles":[]},"previous":{"title":"Array and Linked List","level":"3.1","depth":1,"path":"data-structures/array-and-linked-list/README.md","ref":"./data-structures/array-and-linked-list/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","katex","expandable-chapters-small","codegroup","styles-sass-fix","github","-sharing"],"styles":{"website":"website-1589645033919.css"},"pluginsConfig":{"styles-sass-fix":{},"github":{"url":"https://github.com/icelam/data-structures-and-algorithms"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"fontsettings":{"theme":"night","family":"sans","size":1},"highlight":{},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"assets/images/touch-icons/apple-touch-icon-57x57.png","appleTouchMore":{"180x180":"assets/images/touch-icons/apple-touch-icon-180x180.png","152x152":"assets/images/touch-icons/apple-touch-icon-152x152.png","144x144":"assets/images/touch-icons/apple-touch-icon-144x144.png","120x120":"assets/images/touch-icons/apple-touch-icon-120x120.png","114x114":"assets/images/touch-icons/apple-touch-icon-114x114.png","76x76":"assets/images/touch-icons/apple-touch-icon-76x76.png","72x72":"assets/images/touch-icons/apple-touch-icon-72x72.png","57x57":"assets/images/touch-icons/apple-touch-icon-57x57.png"}},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"icelam","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Data Structures and Algorithms","links":{"sidebar":{"Data Structures and Algorithms":"https://github.com/icelam/data-structures-and-algorithms"}},"gitbook":"*","description":""},"file":{"path":"algorithms/searching/sequential-search/README.md","mtime":"2020-05-16T16:02:12.213Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-16T16:03:52.565Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Sequential Search","level":"4.1","depth":1,"next":{"title":"Binary Search","level":"4.2","depth":1,"path":"algorithms/searching/binary-search/README.md","ref":"./algorithms/searching/binary-search/README.md","articles":[]},"previous":{"title":"Array and Linked List","level":"3.1","depth":1,"path":"data-structures/array-and-linked-list/README.md","ref":"./data-structures/array-and-linked-list/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","katex","expandable-chapters-small","codegroup","styles-sass-fix","github","-sharing"],"styles":{"website":"website-1589646468143.css"},"pluginsConfig":{"styles-sass-fix":{},"github":{"url":"https://github.com/icelam/data-structures-and-algorithms"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"fontsettings":{"theme":"night","family":"sans","size":1},"highlight":{},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"assets/images/touch-icons/apple-touch-icon-57x57.png","appleTouchMore":{"180x180":"assets/images/touch-icons/apple-touch-icon-180x180.png","152x152":"assets/images/touch-icons/apple-touch-icon-152x152.png","144x144":"assets/images/touch-icons/apple-touch-icon-144x144.png","120x120":"assets/images/touch-icons/apple-touch-icon-120x120.png","114x114":"assets/images/touch-icons/apple-touch-icon-114x114.png","76x76":"assets/images/touch-icons/apple-touch-icon-76x76.png","72x72":"assets/images/touch-icons/apple-touch-icon-72x72.png","57x57":"assets/images/touch-icons/apple-touch-icon-57x57.png"}},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"icelam","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Data Structures and Algorithms","links":{"sidebar":{"Data Structures and Algorithms":"https://github.com/icelam/data-structures-and-algorithms"}},"gitbook":"*","description":""},"file":{"path":"algorithms/searching/sequential-search/README.md","mtime":"2020-05-16T16:26:18.138Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-16T16:27:46.948Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
