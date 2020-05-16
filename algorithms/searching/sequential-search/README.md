@@ -9,8 +9,17 @@
 
 ## Code Sample
 
-C++:
-```C++
+{% codegroup %}
+```Python
+def sequentialSearch(arr, item):
+  for i in range(len(arr)):
+    if arr[i] == item:
+      return i
+  
+  return -1
+```
+
+```cpp::C++
 int sequentialSearch(int arr[], int first, int last, int key) {
   for(int index = first; index <= last; index++) {
     if(key == arr[index]) {
@@ -20,6 +29,7 @@ int sequentialSearch(int arr[], int first, int last, int key) {
   return -1; // key is not found
 }
 ```
+{% endcodegroup %}
 
 ## Complexity Analysis
 
