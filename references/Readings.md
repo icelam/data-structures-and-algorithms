@@ -62,3 +62,6 @@ Data Structures and Algorithms library for JavaScript
 
 ## Big-O Cheatsheet
 [https://www.bigocheatsheet.com/](https://www.bigocheatsheet.com/)
+
+## Hackerearth Algorithms
+[https://www.hackerearth.com/practice/algorithms/searching/linear-search/tutorial/](https://www.hackerearth.com/practice/algorithms/searching/linear-search/tutorial/)
