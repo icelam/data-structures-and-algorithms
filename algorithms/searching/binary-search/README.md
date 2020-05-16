@@ -28,6 +28,7 @@ Given an array `[-1, 1, 2, 5, 8, 10, 21, 60, 80]` and an item `10`, find the ind
 
 ## Code Sample
 
+Python:
 ```Python
 def binary_search(list, item): 
   low = 0
