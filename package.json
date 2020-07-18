@@ -7,14 +7,20 @@
     "build": "gitbook install && gitbook build"
   },
   "dependencies": {
-    "gitbook-cli": "^2.3.2"
+    "gitbook-cli": "^2.3.2",
+    "gitbook-plugin-codegroup": "^2.3.3",
+    "gitbook-plugin-expandable-chapters-small": "^0.1.7",
+    "gitbook-plugin-favicon": "0.0.2",
+    "gitbook-plugin-github": "^2.0.0",
+    "gitbook-plugin-katex": "^1.1.4",
+    "gitbook-plugin-styles-sass-fix": "^1.1.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.2.0",
-    "@commitlint/config-conventional": "^8.2.0",
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
     "husky": "^3.1.0",
-    "lint-staged": "^9.4.3",
+    "lint-staged": "^10.2.11",
     "node-sass": "^4.13.1",
-    "prettier": "^1.17.1"
+    "prettier": "^2.0.5"
   }
 }
