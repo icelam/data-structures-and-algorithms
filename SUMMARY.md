@@ -14,7 +14,7 @@
   * [Binary Search](./algorithms/searching/binary-search/README.md)
 
 ## Sorting Algorithms
-  * [Selector Sort](./algorithms/sorting/selection-sort/README.md)
+  * [Selection Sort](./algorithms/sorting/selection-sort/README.md)
 
 ## LeetCode
   * [24. Swap Nodes in Pairs](leetcode/24-swap-nodes-in-pairs/README.md)
